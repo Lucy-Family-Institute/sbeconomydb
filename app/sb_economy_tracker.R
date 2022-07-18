@@ -52,8 +52,6 @@ education <- read_rds("data/claimants_education.Rds")
 industries <- read_rds("data/claimants_industries.Rds")
 occ_grps <- read_rds("data/claimants_occupations.Rds")
 
-# #conomic Complexity files
-selected_msa <- "South Bend-Mishawaka, IN-MI"
 sb_mi_msa <- read_rds("data/sb_mi_msa.Rds")
 
 # business licenses
@@ -69,24 +67,6 @@ certifications_jobs <- read_rds("data/certifications_jobs.Rds")
 
 #### Tab 2: Industry Structure ####
 msa_4digit_2019_q4 <- read_csv("data/msa_4digit_2019_q4.csv")
-
-#### Tab 3: Industry Complexity ####
-msa_4digit_2019_q4_ici <- read_csv("data/msa_4digit_2019_q4_ici.csv")
-
-#### Tab 4: Economic Complexity ####
-eci_over_yrs_rank <- read_csv("data/eci_over_yrs_rank.csv")
-
-#### Tab 5: Industry growth in past 5 years ####
-employment_growth <- read_csv("data/employment_growth.csv")
-
-#### Tab 6: New Products ####
-new_products <- read_csv("data/new_products.csv")
-
-#### Tab 7: Industry Space ####
-prod_net_d3 <- read_rds("data/prod_net_d3.Rds")
-
-#### Tab 8: Opportunity gain vs distance ####
-complexity_COI_gain_distance_sb <- read_csv("data/complexity_COI_gain_distance_sb.csv") 
 
 #ui.R-----------------------------------------------------------------------------------------------------------------------------------------
 ui = dashboardPage(#skin = "black", # blue is default but not too many options
@@ -115,25 +95,15 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                        menuItem("Economy Tracker", tabName = "economy_tracker", icon = icon("heartbeat"), startExpanded = TRUE,
                                 menuSubItem("Labor Demand and Supply", tabName = "labor_market", icon = icon("users")),
                                 menuSubItem("Employment and Unemployment", tabName = "emp_unemp", icon = icon("briefcase")),
-                                
                                 menuSubItem("Housing", tabName = "housing", icon = icon("home")),
                                 menuSubItem("Business Activity", tabName = "business_activity", icon = icon("business-time")),
                                 menuSubItem("Income and poverty", tabName = "income_and_poverty", icon = icon("briefcase")),
                                 menuSubItem("Structural Indicators", tabName = "structural", icon = icon("database"))
                                 ),
-                       menuItem("Economic Complexity", tabName = "economic_complexity", icon = icon("compress-arrows-alt"), startExpanded = TRUE,
-                                menuSubItem("Industry Structure", tabName = "industry_structure", icon = icon("industry")),
-                                menuSubItem("Industry Complexity", tabName = "industry_complexity", icon = icon("industry")),
-                                menuSubItem("Economic Complexity", tabName = "eci_over_yrs", icon = icon("compress-arrows-alt")),
-                                menuSubItem("Employment Growth", tabName = "emp_growth", icon = icon("chart-line")),
-                                menuSubItem("New Products", tabName = "new_products", icon = icon("file")),
-                                menuSubItem("Industry Space", tabName = "industry_space", icon = icon("project-diagram")),
-                                menuSubItem("Growth Opportunities", tabName = "opportunity_gain", icon = icon("seedling"))
-                                ),
                        menuItem("Info", tabName = "info", icon = icon("info-circle"),
                                 menuSubItem("About", tabName = "about", icon = icon("address-card")),
-                                menuSubItem("Data", tabName = "data", icon = icon("database")),
-                                menuSubItem("Glossary", tabName = "glossary", icon = icon("glasses"))
+                                menuSubItem("Data", tabName = "data", icon = icon("database"))#,
+                                #menuSubItem("Glossary", tabName = "glossary", icon = icon("glasses"))
                                 )
                        ), # use collapsed = TRUE to hide dashboard menu
                      
@@ -265,11 +235,14 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                    width=6)
                                ),
                                
-                               fluidRow(box(plotlyOutput('cesPlot_new'), dataTableOutput('small_ces'), width = 6),
+                               fluidRow(box(plotlyOutput('cesPlot_new'), 
+                                            p("Current month = ", format(max(small_ces$dt),"%b, %Y")),
+                                            dataTableOutput('small_ces'), width = 6),
                                         box(plotlyOutput(outputId = 'lausPlot'),
                                             radioButtons("abs_per_laus", "Select Y axis",
                                                          c("Total"="value",
-                                                           "Percentage Change"="per_change"), inline = T), 
+                                                           "Percentage Change"="per_change"), inline = T),
+                                            p("Current month = ", format(max(small_laus$dt),"%b, %Y")),
                                             dataTableOutput('small_laus'),
                                             p("Current month = ", format(max(emp_change$dt),"%b, %Y")),
                                             dataTableOutput('emp_change'),width = 6))
@@ -475,141 +448,6 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                    )
                                
                                ),
-                       tabItem(tabName = "industry_structure",
-                               
-                               fluidRow(
-                                 column(
-                                   h1("Industry Structure",
-                                      style="text-align:justify;color:white;background-color:darkblue;padding:15px;border-radius:10px"),br(),
-                                   width=12)
-                               ),
-                               fluidRow(
-                                 column(
-                                   br(),
-                                   p("South Bend-Mishawaka MSA employed approximately 122,000 individuals in Q2 2020.",br(),
-                                #     "The three largest industries are Restaurants and other eating places, Management of companies and enterprises, and Grocery stores.",br(), 
-                                     "The graph below shows the employment in different industries in SB-Mishawaka MSA. The size of the boxes is proportional to the number of people employed by the industry. The industries in the same sector are grouped together and have the same color.",
-                                     style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
-                                   width=12)
-                               ),
-                               fluidRow(box(plotlyOutput(outputId = 'industryPlot_ec'),width = 12))
-                       ),
-                       tabItem(tabName = "industry_complexity",
-                               fluidRow(
-                                 column(
-                                   h1("Industry Complexity",
-                                      style="text-align:justify;color:white;background-color:darkblue;padding:15px;border-radius:10px"),br(),
-                                   width=12)
-                               ),
-                               fluidRow(
-                                 column(
-                                   br(),
-                                   p("Industry Complexity Index is a rank of Industries based on how likely the industry is observed with other industries. 
-                                   The largest industries in SB-Mishawaka MSA have low complexity.",br(),
-                                     "The graph shows the industry complexity index of different industries in SB-Mishawaka MSA. 
-                                     The size of the box is proportional to the number of people employed by the industry. 
-                                     The industries in the same sector are grouped together and have the same color.",br(),
-                                     "The industry complexity index varies from -1.47 to +2.48. A higher complexity index indicates a complex industry.",
-                                     style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
-                                   width=12)
-                               ),
-                               fluidRow(box(plotlyOutput(outputId = 'industryCompPlot'), width = 12))
-                       ),
-                       tabItem(tabName = "eci_over_yrs",
-                               fluidRow(
-                                 column(
-                                   h1("Economic Complexity",
-                                      style="text-align:justify;color:white;background-color:darkblue;padding:15px;border-radius:10px"),br(),
-                                   width=12)
-                               ),
-                               fluidRow(
-                                 column(
-                                   br(),
-                                   p("Economic Complexity Index (ECI) is a rank of Metropolitan Statistical Areas (MSAs) based on how diversified and complex products they produce.
-                                   South Bend-Mishawaka MSA's ECI ranking in 2014 Q1 was 235 and its ranking in 2019 was 243. The ranking has thus worsened by 8 positions across time.
-                                     The graph below shows the evolution of ECI ranking for SB-Mishawaka MSA and few other MSA's around it.",
-                                     style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
-                                   width=12)
-                               ),
-                               fluidRow(box(plotlyOutput(outputId = 'eciPlot'),width = 12))
-                       ),
-                       tabItem(tabName = "emp_growth",
-                               fluidRow(
-                                 column(
-                                   h1("Employment Growth",
-                                      style="text-align:justify;color:white;background-color:darkblue;padding:15px;border-radius:10px"),br(),
-                                   width=12)
-                               ),
-                               fluidRow(
-                                 column(
-                                   br(),
-                                   p("SB-Mishawaka MSA has seen a static pattern of industry/ employment growth, with the largest contribution to industry growth coming from moderate complexity industries, particularly Beverage Manufacturing, and RV Parks and Recreational Camps industries.
-                                   The graph below shows the industry growth by industry complexity for all industries in SB-Mishawaka MSA. Industries in same sector have the same color.",
-                                     style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
-                                   width=12)
-                               ),
-                               fluidRow(box(plotlyOutput(outputId = 'emp_growth_Plot'),width = 12))
-                       ),
-                       tabItem(tabName = "new_products",
-                               fluidRow(
-                                 column(
-                                   h1("New products",
-                                      style="text-align:justify;color:white;background-color:darkblue;padding:15px;border-radius:10px"),br(),
-                                   width=12)
-                               ),
-                               fluidRow(
-                                 column(
-                                   br(),
-                                   p("Economic growth is driven by diversification into new industries that are incrementally more complex. 
-                                   South Bend-Mishawaka MSA has added 25 new industries since 2015 and these industries employ approximately 12,000 individuals.
-                                   The graph below shows the employment in new industries in SB-Mishawaka MSA. The size of the boxes is proportional to the number of people employed by the industry.",
-                                     style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
-                                   width=12)
-                               ),
-                               fluidRow(box(plotlyOutput(outputId = 'new_products_Plot'),width = 12))
-                       ),
-                       tabItem(tabName = "industry_space",
-                               fluidRow(
-                                 column(
-                                   h1("Industry Space",
-                                      style="text-align:justify;color:white;background-color:darkblue;padding:15px;border-radius:10px"),br(),
-                                   width=12)
-                               ),
-                               fluidRow(
-                                 column(
-                                   br(),
-                                   p("SB-Mishawaka MSA's Industry Space illustrates the relatedness of its industries and potential paths to diversify its economy.",br(),
-                                   "Each node represents an industry. A connection between nodes/ industries implies that these industries are frequently observed together in other MSAs. 
-                                   Presence of an industry in South Bend-Mishawaka MSA is indicated by a colored node. While the absence is indicated by a gray node. Industries in the same sector have same color",br(),br(),
-                                   "Creating a new industry is akin to turning a gray node to colored. Gray nodes that are connected to colored nodes (existing industries) are easier to develop than gray nodes unconnected to colored nodes. Thus, diversification would be faster by connecting to gray nodes that are further connected to other colored nodes.", br(),br(),
-                                   "Click and zoom on the graph below to explore the industry space",
-                                     style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
-                                   width=12)
-                               ),
-                               fluidRow(box(forceNetworkOutput(outputId = 'industry_space_Plot'),width = 12))
-                       ),
-                       tabItem(tabName = "opportunity_gain",
-                               fluidRow(
-                                 column(
-                                   h1("Growth Opportunities",
-                                      style="text-align:justify;color:white;background-color:darkblue;padding:15px;border-radius:10px"),br(),
-                                   width=12)
-                               ),
-                               fluidRow(
-                                 column(
-                                   br(),
-                                   p("Regions grow by diversifying into new industries of increasing complexity. Strategic new industries aim to balance:",br(),
-                                     strong(".	Distance to existing capabilities:")," lower distance (close to 0) signifies an industry is ",em("nearby"),"to existing knowhow.",br(),
-                                     strong(".	Complexity:")," more complex industries tend to support higher wages.",br(),
-                                            strong(".	Opportunity gain for future diversification:")," higher values hold more linkages to other high-complexity industries, opening more opportunities for continued diversification.",br(),
-"The figures show the distribution of industries. The industries highlighted in yellow are most prime to be developed. These are (i) more complex than SB-Mishawaka MSA's ECI, and (ii) have more linkages to other new industries. Adding them would improve SB-Mishawaka MSA ECI and possibilities of diversifying into even more industries.",
-                                     style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
-                                   width=12)
-                               ),
-                               fluidRow(box(plotlyOutput(outputId = 'opportunity_gain_Plot'),width = 6),
-                                        box(plotlyOutput(outputId = 'product_complexity_Plot'),width = 6))
-                       )
-                       ,
                        tabItem(tabName = "about",
                                fluidRow(
                                  column(
@@ -619,21 +457,19 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                ),
                                fluidRow(
                                  column(
-                                   #br(),
                                    p("This website has been developed by the ",tags$a(href = "https://pulte.nd.edu/", "Pulte Institute for Global Development"), "and the",
                                      tags$a(href = "https://lucyinstitute.nd.edu/", "Lucy Family Institute for Data & Society"),
                                    " at the University of Notre Dame, in collaboration with the City of South Bend. Funding was provided by the Citi Foundation.",
                                      br(),br(),
-                                     "The objective is to (i)	provide clear visibility of the state of the South Bend - Mishawaka MSA economy and 
-                                     (ii)	suggest industries grow the economy.",
+                                     "The objective is to provide clear visibility of the state of the South Bend - Mishawaka MSA economy.",
                                      br(),br(),
-                                     "The Economy tracker data will be updated monthly while the complexity analysis will be updated quarterly.",
+                                     "The Economy tracker data will be updated monthly.",
                                      br(),br(),
-                                     "The Economic Complexity Analysis was originally developed by Hausmann et al. (2014) to understand growth potential for countries. The methodology was adapted for metro areas by Escobari et al. (2019). 
-                                     The website design is influenced by ",tags$a(href = "https://atlas.cid.harvard.edu/", "Atlas of Economic Complexity"),
-                                     br(),br(),
-                                     "All the data and the code is available ",tags$a(href = "https://github.com/pulte-nd/sbeconomydb", "here."),
-                                     "For any feedback/questions, please ",tags$a(href = "mailto:smotghare@nd.edu", "contact us."),
+                                     #"The Economic Complexity Analysis was originally developed by Hausmann et al. (2014) to understand growth potential for countries. The methodology was adapted for metro areas by Escobari et al. (2019). 
+                                     #The website design is influenced by ",tags$a(href = "https://atlas.cid.harvard.edu/", "Atlas of Economic Complexity"),
+                                     #br(),br(),
+                                     "All the data and the code is available ",tags$a(href = "https://github.com/Lucy-Family-Institute/sbeconomydb", "here."),
+                                     #"For any feedback/questions, please ",tags$a(href = "mailto:smotghare@nd.edu", "contact us."),
                                      br(),br(),
                                      "Citation:",
                                      br(), 
@@ -642,12 +478,12 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                      #"Download newsletter ",tags$a(href = "my-report.pdf", "here"),
                                      #br(),br(),
                                      #a(href="my-report.pdf", "Download PDF", download=NA, target="_blank"),
-                                     br(),br(),
-                                     "References",
-                                     br(),
-                                     "   Hausmann, R., Hidalgo, C. A., Bustos, S., Coscia, M., and Simoes, A. (2014). The atlas of economic complexity: Mapping paths to prosperity. MIT Press.",
-                                     br(),
-                                     "   Escobari, M., Seyal, I., Morales-Arilla, J., and Shearer, C. (2019). Growing cities that work for all: A capability-based approach to regional economic competitiveness.",
+                                     #br(),br(),
+                                     #"References",
+                                     #br(),
+                                     #"   Hausmann, R., Hidalgo, C. A., Bustos, S., Coscia, M., and Simoes, A. (2014). The atlas of economic complexity: Mapping paths to prosperity. MIT Press.",
+                                     #br(),
+                                     #"   Escobari, M., Seyal, I., Morales-Arilla, J., and Shearer, C. (2019). Growing cities that work for all: A capability-based approach to regional economic competitiveness.",
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
                                    width=12)
                                  )
@@ -712,28 +548,29 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                     width=6)
                                   
                                 
-                                )),
-                       tabItem(tabName = "glossary",
-                               fluidRow(
-                                 column(
-                                   h1("Glossary",
-                                      style="text-align:justify;color:white;background-color:darkblue;padding:15px;border-radius:10px"),br(),
-                                   width=12)
-                               ),
-                               fluidRow(
-                                 column(
-                                   br(),
-                                   p(strong("Economic Complexity:")," A measure of the knowledge in a society as expressed in the products it makes.",br(),
-                                     strong("Economic Complexity Index (ECI):")," A rank of Metropolitan Statistical Areas (MSAs) based on how diversified and complex products they produce.",br(),
-                                     strong("Industry Complexity Index (ICI):")," A rank of Industries based on how likely the industry is observed with other industries.",br(),
-                                     strong("Industry Space:")," Industry Space illustrates the relatedness of its industries and potential paths to diversify its economy.",br(),
-                                     strong("Opportunity gain:")," Measures how much a location could benefit in opening future diversification opportunities by developing a particular industry.",br(),
-                                     strong("Distance to existing capabilities:")," This measures the difficulty of developing a new industry. A lower distance signifies an industry is", em("nearby")," to existing knowhow and hence the industry can be developed relatively easily.",br(),
-                                     strong("Opportunity Gain:")," Opportunity gain for future diversification: higher values hold more linkages to other high-complexity industries, opening more opportunities for continued diversification.",
-                                     style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
-                                   width=12)
-                               )
-                       )
+                                )
+                                )#,
+                       #tabItem(tabName = "glossary",
+                      #         fluidRow(
+                      #           column(
+                      #             h1("Glossary",
+                      #                style="text-align:justify;color:white;background-color:darkblue;padding:15px;border-radius:10px"),br(),
+                      #             width=12)
+                      #         ),
+                      #         fluidRow(
+                      #          column(
+                      #             br(),
+                      #             p(strong("Economic Complexity:")," A measure of the knowledge in a society as expressed in the products it makes.",br(),
+                      #               strong("Economic Complexity Index (ECI):")," A rank of Metropolitan Statistical Areas (MSAs) based on how diversified and complex products they produce.",br(),
+                      #               strong("Industry Complexity Index (ICI):")," A rank of Industries based on how likely the industry is observed with other industries.",br(),
+                      #               strong("Industry Space:")," Industry Space illustrates the relatedness of its industries and potential paths to diversify its economy.",br(),
+                      #               strong("Opportunity gain:")," Measures how much a location could benefit in opening future diversification opportunities by developing a particular industry.",br(),
+                      #               strong("Distance to existing capabilities:")," This measures the difficulty of developing a new industry. A lower distance signifies an industry is", em("nearby")," to existing knowhow and hence the industry can be developed relatively easily.",br(),
+                      #               strong("Opportunity Gain:")," Opportunity gain for future diversification: higher values hold more linkages to other high-complexity industries, opening more opportunities for continued diversification.",
+                      #               style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
+                      #             width=12)
+                       #        )
+                       #)
                        
                    )
 ) # end of dashboardbody
@@ -876,7 +713,7 @@ server = function(input, output, session) {
   output$small_ces = renderDT(
     small_ces %>%
     filter(msa_name==input$select_msa_emp) %>% # show dt for the selected msa
-      select(-msa_name) %>% # lose msa_name column
+      select(-msa_name,-dt) %>% # lose msa_name column and date
     datatable(selection=list(mode = 'single',selected=1), rownames=F) %>% 
       formatPercentage(c(3,4,5,6), 2) %>% formatStyle(columns = c('Previous 30 days','Previous 90 days','Previous Year','Pre-covid'),
                                                       color=styleInterval(-0.00001, c('red','green'))), # so that 0 is colored green 
@@ -885,8 +722,8 @@ server = function(input, output, session) {
   output$small_laus = renderDT(
     small_laus %>%
       filter(msa_name==input$select_msa_emp) %>% # show dt for the selected msa
-      select(-msa_name) %>% # lose msa_name column
-      datatable(selection=list(mode = 'single',selected=1), rownames=F) %>% 
+      select(-msa_name,-dt) %>% # lose msa_name column and date
+      datatable(selection=list(mode = 'single',selected=1), rownames=F,options = list(searching = FALSE)) %>% 
       formatPercentage(c(3,4,5,6), 2) %>% formatStyle(columns = c('Previous 30 days','Previous 90 days','Previous Year','Pre-covid'),
                                                       color=styleInterval(-0.00001, c('red','green'))), # so that 0 is colored green 
     server = FALSE)
@@ -895,7 +732,7 @@ server = function(input, output, session) {
     emp_change %>%
       filter(msa_name==input$select_msa_emp) %>% # show dt for the selected msa
       select(-msa_name,-dt) %>% # lose msa_name column and date
-      datatable(selection=list(mode = 'single',selected=1), rownames=F) %>% 
+      datatable(selection=list(mode = 'single',selected=1), rownames=F,options = list(searching = FALSE)) %>% 
       formatPercentage(c(3,4,5), 2) %>% formatStyle(columns = c('Previous 30 days','Previous 90 days','Previous Year'),
                                                       color=styleInterval(-0.00001, c('red','green'))), # so that 0 is colored green 
     server = FALSE)
@@ -1382,134 +1219,6 @@ output$mapPlot_msa <- renderLeaflet({
   
 })
 
-output$industryPlot_ec <- renderPlotly( {
-  msa_4digit_2019_q4 %>%
-    filter(msa_name==selected_msa) %>%
-    mutate(two_digit_industry_code=substr(industry_code,1,2)) %>%
-    plotly::plot_ly(
-      labels = ~ industry_title,
-      parents = NA,
-      values = ~ bls_employment,
-      type = 'treemap',
-      hovertemplate = "Industry: %{label}<br>Employment: %{value}<extra></extra>"
-    )
-})
-
-output$industryCompPlot <- renderPlotly( {
-  msa_4digit_2019_q4_ici %>%
-    filter(msa_name==selected_msa) %>%
-    mutate(two_digit_industry_code=substr(industry_code,1,2)) %>%
-    plotly::plot_ly(
-      labels = ~ industry_title,
-      parents = NA,
-      values = ~ bls_employment,
-      type = 'treemap',
-      #hovertemplate = "Industry: %{label}<br>Complexity: %{ici}",
-      text=~paste('</br> Complexity index: ', round(ici,2)),
-      marker=list(colors=~ici)) %>%
-    layout(showlegend=T)
-    
-})
-
-output$eciPlot <- renderPlotly( {
-  fig <- eci_over_yrs_rank %>%
-    plot_ly(x = ~yr_qtr, y = ~eci_rank,
-            split =~msa_name,
-            type = "scatter", mode = "line", 
-            color = ~color_var, fill=~color_var,
-            text=~eci_rank, label="text", colors = c("grey", "red"), opacity=0.8,
-            line = list(shape = 'spline')) %>%
-    hide_legend() %>% hide_colorbar() %>% 
-    layout(yaxis = list(title="ECI Rank",
-                        autorange = "reversed", zeroline=F),
-           title = paste0("Evolution of ECI for "),
-           xaxis = list(title = "Quarter")) # use zeroline = FALSE to remove zero line 
-  
-  fig
-})
-
-output$emp_growth_Plot <- renderPlotly( {
-  fig <- filter(employment_growth, msa_name==selected_msa) %>%
-    plot_ly(x = ~ici, y = ~cagr,opacity = 0.8,
-            color = ~industry_title,        
-            text = ~industry_title, 
-            hoverinfo = "text",
-            type = 'scatter',
-            mode = 'markers',
-            marker = list(size = 20))
-  fig <- fig %>% layout(title = selected_msa,
-                        xaxis = list(title = "Product Complexity"), # use zeroline = FALSE to remove zero line :)
-                        yaxis = list(title="Annual employment growth (2014-2019)"))
-  
-  fig <- fig %>% hide_legend()
-  
-  fig
-})
-
-output$new_products_Plot <- renderPlotly( {
-  p <- plot_ly(
-    new_products,
-    labels = ~ industry_title,
-    parents = NA,
-    values = ~ bls_employment,
-    type = 'treemap',
-    hovertemplate = "Industry: %{label}<br>Employment: %{value}<extra></extra>"
-  )
-  
-  p
-})
-
-output$industry_space_Plot <- renderForceNetwork ({
-  forceNetwork(Links = prod_net_d3$links, Nodes = prod_net_d3$nodes,
-               Source = 'source', Target = 'target', NodeID = 'name', 
-               Nodesize = "Nodesize", radiusCalculation = JS("Math.sqrt(d.nodesize/10000)+6"),
-               Group = 'group', opacity = 1, opacityNoHover=1, charge = -5, fontFamily = "calibri",
-               colourScale = 'd3.scaleOrdinal().domain(["absent","Accommodation and Food Services","Administrative and Support and Waste Management and Remediation Services",
-             "Agriculture, Forestry, Fishing and Hunting","Construction","Educational Services","Finance and Insurance","Manufacturing",
-             "Information","Health Care and Social Assistance","Other Services (except Public Administration)","Professional, Scientific, and Technical Services",
-             "Real Estate and Rental and Leasing","Retail Trade","Transportation and Warehousing","Utilities","Wholesale Trade"]).
-             range(["grey","darkgreen","darkmagenta","darkorange","deepskyblue","firebrick","gold","deeppink","green","ndianred","khaki","lavender","lightcoral",
-             "lightsalmon","lightseagreen","maroon","seashell"])',legend = T, zoom=T,
-               height = 700,width = 1200)
-  
-})
-
-output$opportunity_gain_Plot <- renderPlotly( {
-  fig <- plot_ly(complexity_COI_gain_distance_sb,x = ~distance, y = ~COI_gain, opacity=0.5,
-                 color = ~h_light_coi, 
-                 text = ~industry_title, 
-                 hoverinfo = "text",
-                 type = 'scatter',
-                 mode = 'markers',
-                 marker = list(size = 10)
-  ) 
-  
-  fig <- fig %>% 
-    hide_legend() %>% hide_colorbar() 
-  
-  fig <- fig %>% 
-    layout(title = selected_msa,
-           xaxis = list(title = "Distance", zeroline=F), # use zeroline = FALSE to remove zero line :)
-           yaxis = list(title="Opportunity Gain", zeroline=F))
-  
-  fig
-})
-
-output$product_complexity_Plot <- renderPlotly( {
-  fig <- plot_ly(complexity_COI_gain_distance_sb,x = ~distance, y = ~ici, opacity=0.5,
-                 color = ~h_light_ici, 
-                 text = ~industry_title, 
-                 hoverinfo = "text",
-                 type = 'scatter',
-                 mode = 'markers',
-                 marker = list(size = 10)) %>% 
-    hide_legend() %>% hide_colorbar() %>% 
-    layout(title = selected_msa,
-           xaxis = list(title = "Distance", zeroline=F), # use zeroline = FALSE to remove zero line :)
-           yaxis = list(title="Industry Complexity", zeroline=F))
-  
-  fig
-})
 
 output$myImage <- renderImage({
   #width  <- session$clientData$output_myImage_width

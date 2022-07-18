@@ -209,7 +209,7 @@ sb_elk_ces_sup %>%
   filter(dt==max(dt)) %>%
   filter(as.numeric(supersector_code)>8 | industry_name=="Total Nonfarm") %>%
   arrange(desc(total_employment)) %>%
-  select(msa_name,Industry=industry_name,`Total Employment`=total_employment,
+  select(msa_name,Industry=industry_name,dt,`Total Employment`=total_employment,
          `Previous 30 days`=mnth_change,`Previous 90 days`=qtr_change,`Previous Year`=yoy_change,`Pre-covid`=rel_covid_change) %>%
   write_rds("app/data/small_ces.Rds")
 
@@ -233,7 +233,7 @@ laus_select_areas <- laus_in %>% filter(series_id %in% select_series$series_id)%
   left_join(select_series, by="series_id") %>% # add text
   select(state_code=srd_code,area_code,series_title,dt,value)
 
-laus_select_areas$dt %>% max() # "2022-03-01"
+laus_select_areas$dt %>% max() # "2022-05-01"
 
 
 rm(laus_in,laus_series,select_series)
@@ -261,7 +261,7 @@ write_rds(laus_select,"app/data/laus_select.Rds")
 # clean version for display
 laus_select %>%
   filter(dt==max(dt), !str_detect(measure,"Unemployment")) %>%
-  select(msa_name,Measure=measure,Current=value,
+  select(msa_name,Measure=measure,Current=value,dt,
          `Previous 30 days`=mnth_change,`Previous 90 days`=qtr_change,`Previous Year`=yoy_change,`Pre-covid`=rel_covid_change) %>%
   write_rds("app/data/small_laus.Rds")
 
@@ -274,7 +274,7 @@ mnth <- formatC(seq(1,12), width = 2, format = "d", flag = "0")
 
 eg <- expand.grid(yr, mnth)
 # check the latest month here: https://www2.census.gov/econ/bps/Metro/
-yr_mnth <- sprintf('%s%s', eg[,1], eg[,2]) %>% sort() %>% head(x,n=-8) # lost last 11 months of 2022 for which data is not available
+yr_mnth <- sprintf('%s%s', eg[,1], eg[,2]) %>% sort() %>% head(x,n=-7) # lost last 7 months of 2022 for which data is not available
 
 links <- paste0("https://www2.census.gov/econ/bps/Metro/ma",yr_mnth,"c.txt") # c is for current
 
@@ -285,7 +285,7 @@ df <- lapply(links, function(x) {
            skip = 1)
 }) %>% bind_rows()
 
-max(df$Date) # 202204
+max(df$Date) # 202205
 
 rm(links,yr,mnth,eg,yr_mnth,links)
 
@@ -304,6 +304,8 @@ rm(df,housing_sb)
 sb_evictions <- read_csv("https://eviction-lab-data-downloads.s3.amazonaws.com/ets/all_sites_weekly_2020_2021.csv") %>%
   filter(str_detect(city,"South Bend"))
 
+sb_evictions$week_date %>% max() # "2022-07-03"
+
 sb_weekly <- sb_evictions %>% group_by(week_date) %>%
   summarise(total_filings=sum(filings_2020),
             avg_filings=sum(filings_avg)) %>%
@@ -314,6 +316,7 @@ rm(sb_evictions,sb_weekly)
 
 # home values
 home_prices <- read_csv("raw data/Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv")
+
 
 home_prices_in <- home_prices %>%
   filter(StateName=="IN") %>% # indiana regions
@@ -329,13 +332,15 @@ home_prices_in <- home_prices %>%
   mutate(msa=ifelse(msa=="South Bend, IN","South Bend - Mishawaka",
                     ifelse(msa=="Elkhart, IN","Elkhart - Goshen",msa)))
 
+home_prices_in$dt %>% max() # "2022-06-30"
+
 home_prices_in %>% write_rds("app/data/home_prices_in.Rds")
 rm(home_prices,home_prices_in)
 
 ### poverty and spending ###
 snap_tanf_df <- lapply(list.files("raw data/poverty/snap and tanf/",pattern = ".xls"), function (x) {
   print(x)
-  read_html(paste0("C:/Users/LOANER/OneDrive - nd.edu/Data/poverty/snap and tanf/",x)) %>%
+  read_html(paste0("raw data/poverty/snap and tanf/",x)) %>%
     html_table(header = T) %>% .[[1]] %>%
     filter(Description=="Number of families receiving TANF grants" | Description=="Total TANF payments" |
              Description =="Number of households receiving food stamps" | Description=="Total food stamps issued") %>%
@@ -347,7 +352,7 @@ snap_tanf_df <- lapply(list.files("raw data/poverty/snap and tanf/",pattern = ".
          Data=as.numeric(str_remove(Data,","))) %>%
   select(msa_name,dt,Description,value=Data)
 
-max(snap_tanf_df$dt) # "2022-02-01"
+max(snap_tanf_df$dt) # "2022-06-01"
 
 snap_tanf_df %>% write_rds("app/data/snap_tanf_df.Rds")
 rm(snap_tanf_df)
