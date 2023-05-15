@@ -1,0 +1,13 @@
+name: sbeconomydb
+title: sbeconomydb
+username:
+account: lucyapps
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7599169
+bundleId: 6628664
+url: https://lucyapps.shinyapps.io/sbeconomydb/
+when: 1670876003.62546
+lastSyncTime: 1670876003.62546
+asMultiple: FALSE
+asStatic: FALSE
