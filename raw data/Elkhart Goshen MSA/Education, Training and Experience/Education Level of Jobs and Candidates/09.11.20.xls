@@ -1,0 +1,31 @@
+<div style="text-align:center;font-weight:bold;font-size:14pt;font-family:Arial;">Area Profile for Elkhart-Goshen, IN Metropolitan Statistical Area</div><br /><div style="text-align:center;font-weight:bold;font-size:11pt;font-family:Arial;">Education Level of Jobs and Candidates Table</div><br /><div style="font-size:9pt;font-family:Arial;padding-top:5px;padding-bottom:5px;width:100%;">The table below shows the minimum level of education requested by employers on job openings advertised online, as well as the educational attainment of potential candidates in the workforce system that are looking for jobs in Elkhart-Goshen, IN Metropolitan Statistical Area on September 10, 2020. There were 3771 job openings advertised online that did not specify a minimum education requirement (Jobs De-duplication Level 2).</div><table cellspacing="0" cellpadding="4" align="Justify" rules="all" border="1" style="font-family:Arial;font-size:9pt;width:100%;border-collapse:collapse;">
+	<tr align="center" style="font-weight:bold;">
+		<td>Rank</td><td>Education Level</td><td>Job Openings</td><td>Percentage of Job Openings</td><td>Potential Candidates</td><td>Percentage of Potential Candidates</td>
+	</tr><tr>
+		<td style="text-align:center">1</td><td>No Minimum Education Requirement</td><td style="mso-number-format:\@; text-align:right;">95</td><td style="mso-number-format:\@; text-align:right;">2.18%</td><td style="mso-number-format:\@; text-align:right;">0</td><td>N/A</td>
+	</tr><tr>
+		<td style="text-align:center">2</td><td>Less than High School</td><td style="mso-number-format:\@; text-align:right;">0</td><td>N/A</td><td style="mso-number-format:\@; text-align:right;">530</td><td style="mso-number-format:\@; text-align:right;">6.68%</td>
+	</tr><tr>
+		<td style="text-align:center">3</td><td>High School Diploma or Equivalent</td><td style="mso-number-format:\@; text-align:right;">351</td><td style="mso-number-format:\@; text-align:right;">8.05%</td><td style="mso-number-format:\@; text-align:right;">3,235</td><td style="mso-number-format:\@; text-align:right;">40.74%</td>
+	</tr><tr>
+		<td style="text-align:center">4</td><td>1 Year of College or a Technical or Vocational School</td><td style="mso-number-format:\@; text-align:right;">2</td><td style="mso-number-format:\@; text-align:right;">0.05%</td><td style="mso-number-format:\@; text-align:right;">0</td><td>N/A</td>
+	</tr><tr>
+		<td style="text-align:center">5</td><td>2 Years of College or a Technical or Vocational School</td><td style="mso-number-format:\@; text-align:right;">1</td><td style="mso-number-format:\@; text-align:right;">0.02%</td><td style="mso-number-format:\@; text-align:right;">0</td><td>N/A</td>
+	</tr><tr>
+		<td style="text-align:center">6</td><td>3 Years of College or a Technical or Vocational School</td><td style="mso-number-format:\@; text-align:right;">1</td><td style="mso-number-format:\@; text-align:right;">0.02%</td><td style="mso-number-format:\@; text-align:right;">0</td><td>N/A</td>
+	</tr><tr>
+		<td style="text-align:center">7</td><td>Vocational School Certificate</td><td style="mso-number-format:\@; text-align:right;">32</td><td style="mso-number-format:\@; text-align:right;">0.73%</td><td style="mso-number-format:\@; text-align:right;">239</td><td style="mso-number-format:\@; text-align:right;">3.01%</td>
+	</tr><tr>
+		<td style="text-align:center">8</td><td>Associate's Degree</td><td style="mso-number-format:\@; text-align:right;">20</td><td style="mso-number-format:\@; text-align:right;">0.46%</td><td style="mso-number-format:\@; text-align:right;">741</td><td style="mso-number-format:\@; text-align:right;">9.33%</td>
+	</tr><tr>
+		<td style="text-align:center">9</td><td>Bachelor's Degree</td><td style="mso-number-format:\@; text-align:right;">79</td><td style="mso-number-format:\@; text-align:right;">1.81%</td><td style="mso-number-format:\@; text-align:right;">1,299</td><td style="mso-number-format:\@; text-align:right;">16.36%</td>
+	</tr><tr>
+		<td style="text-align:center">10</td><td>Master's Degree</td><td style="mso-number-format:\@; text-align:right;">4</td><td style="mso-number-format:\@; text-align:right;">0.09%</td><td style="mso-number-format:\@; text-align:right;">407</td><td style="mso-number-format:\@; text-align:right;">5.13%</td>
+	</tr><tr>
+		<td style="text-align:center">11</td><td>Doctorate Degree</td><td style="mso-number-format:\@; text-align:right;">0</td><td>N/A</td><td style="mso-number-format:\@; text-align:right;">57</td><td style="mso-number-format:\@; text-align:right;">0.72%</td>
+	</tr><tr>
+		<td style="text-align:center">12</td><td>Specialized Degree (e.g. MD, DDS)</td><td style="mso-number-format:\@; text-align:right;">4</td><td style="mso-number-format:\@; text-align:right;">0.09%</td><td style="mso-number-format:\@; text-align:right;">8</td><td style="mso-number-format:\@; text-align:right;">0.10%</td>
+	</tr><tr>
+		<td style="text-align:center">13</td><td>Not Specified</td><td style="mso-number-format:\@; text-align:right;">3,771</td><td style="mso-number-format:\@; text-align:right;">86.49%</td><td style="mso-number-format:\@; text-align:right;">0</td><td>N/A</td>
+	</tr>
+</table><div style="text-align:center;font-size:7.5pt;font-family:Arial;padding-top:10px;">Source: Job Source:  Online advertised jobs data<br/>Candidate Source:  Individuals with active r&#233;sum&#233;s in the workforce system.<br />Downloaded: 09/11/2020 4:37 PM</div>

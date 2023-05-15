@@ -1,0 +1,187 @@
+series_id,state_code,area_code,supersector_code,industry_code,data_type_code,seasonal,area_name,supersector_name,industry_name,data_type_text,seasonal_text
+SMU18140200000000001,18,14020,00,00000000,01,U,"Bloomington, IN",Total Nonfarm,Total Nonfarm,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18140201500000001,18,14020,15,15000000,01,U,"Bloomington, IN","Mining, Logging, and Construction","Mining, Logging and Construction","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18140203000000001,18,14020,30,30000000,01,U,"Bloomington, IN",Manufacturing,Manufacturing,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18140204100000001,18,14020,41,41000000,01,U,"Bloomington, IN",Wholesale Trade,Wholesale Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18140204200000001,18,14020,42,42000000,01,U,"Bloomington, IN",Retail Trade,Retail Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18140204300000001,18,14020,43,43000000,01,U,"Bloomington, IN",Transportation and Utilities,"Transportation, Warehousing, and Utilities","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18140205000000001,18,14020,50,50000000,01,U,"Bloomington, IN",Information,Information,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18140205500000001,18,14020,55,55000000,01,U,"Bloomington, IN",Financial Activities,Financial Activities,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18140206000000001,18,14020,60,60000000,01,U,"Bloomington, IN",Professional and Business Services,Professional and Business Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18140206500000001,18,14020,65,65000000,01,U,"Bloomington, IN",Education and Health Services,Education and Health Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18140207000000001,18,14020,70,70000000,01,U,"Bloomington, IN",Leisure and Hospitality,Leisure and Hospitality,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18140208000000001,18,14020,80,80000000,01,U,"Bloomington, IN",Other Services,Other Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18140209091000001,18,14020,90,90910000,01,U,"Bloomington, IN",Government,Federal Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18140209092000001,18,14020,90,90920000,01,U,"Bloomington, IN",Government,State Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18140209093000001,18,14020,90,90930000,01,U,"Bloomington, IN",Government,Local Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18180200000000001,18,18020,00,00000000,01,U,"Columbus, IN",Total Nonfarm,Total Nonfarm,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18180201500000001,18,18020,15,15000000,01,U,"Columbus, IN","Mining, Logging, and Construction","Mining, Logging and Construction","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18180203000000001,18,18020,30,30000000,01,U,"Columbus, IN",Manufacturing,Manufacturing,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18180204200000001,18,18020,42,42000000,01,U,"Columbus, IN",Retail Trade,Retail Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18180205000000001,18,18020,50,50000000,01,U,"Columbus, IN",Information,Information,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18180205500000001,18,18020,55,55000000,01,U,"Columbus, IN",Financial Activities,Financial Activities,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18180206000000001,18,18020,60,60000000,01,U,"Columbus, IN",Professional and Business Services,Professional and Business Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18180206500000001,18,18020,65,65000000,01,U,"Columbus, IN",Education and Health Services,Education and Health Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18180207000000001,18,18020,70,70000000,01,U,"Columbus, IN",Leisure and Hospitality,Leisure and Hospitality,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18180208000000001,18,18020,80,80000000,01,U,"Columbus, IN",Other Services,Other Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18180209091000001,18,18020,90,90910000,01,U,"Columbus, IN",Government,Federal Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18180209092000001,18,18020,90,90920000,01,U,"Columbus, IN",Government,State Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18180209093000001,18,18020,90,90930000,01,U,"Columbus, IN",Government,Local Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18211400000000001,18,21140,00,00000000,01,U,"Elkhart-Goshen, IN",Total Nonfarm,Total Nonfarm,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18211401500000001,18,21140,15,15000000,01,U,"Elkhart-Goshen, IN","Mining, Logging, and Construction","Mining, Logging and Construction","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18211403000000001,18,21140,30,30000000,01,U,"Elkhart-Goshen, IN",Manufacturing,Manufacturing,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18211404100000001,18,21140,41,41000000,01,U,"Elkhart-Goshen, IN",Wholesale Trade,Wholesale Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18211404200000001,18,21140,42,42000000,01,U,"Elkhart-Goshen, IN",Retail Trade,Retail Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18211404300000001,18,21140,43,43000000,01,U,"Elkhart-Goshen, IN",Transportation and Utilities,"Transportation, Warehousing, and Utilities","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18211405000000001,18,21140,50,50000000,01,U,"Elkhart-Goshen, IN",Information,Information,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18211405500000001,18,21140,55,55000000,01,U,"Elkhart-Goshen, IN",Financial Activities,Financial Activities,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18211406000000001,18,21140,60,60000000,01,U,"Elkhart-Goshen, IN",Professional and Business Services,Professional and Business Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18211406500000001,18,21140,65,65000000,01,U,"Elkhart-Goshen, IN",Education and Health Services,Education and Health Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18211407000000001,18,21140,70,70000000,01,U,"Elkhart-Goshen, IN",Leisure and Hospitality,Leisure and Hospitality,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18211408000000001,18,21140,80,80000000,01,U,"Elkhart-Goshen, IN",Other Services,Other Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18211409091000001,18,21140,90,90910000,01,U,"Elkhart-Goshen, IN",Government,Federal Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18211409092000001,18,21140,90,90920000,01,U,"Elkhart-Goshen, IN",Government,State Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18211409093000001,18,21140,90,90930000,01,U,"Elkhart-Goshen, IN",Government,Local Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18217800000000001,18,21780,00,00000000,01,U,"Evansville, IN-KY",Total Nonfarm,Total Nonfarm,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18217801500000001,18,21780,15,15000000,01,U,"Evansville, IN-KY","Mining, Logging, and Construction","Mining, Logging and Construction","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18217803000000001,18,21780,30,30000000,01,U,"Evansville, IN-KY",Manufacturing,Manufacturing,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18217804100000001,18,21780,41,41000000,01,U,"Evansville, IN-KY",Wholesale Trade,Wholesale Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18217804200000001,18,21780,42,42000000,01,U,"Evansville, IN-KY",Retail Trade,Retail Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18217804300000001,18,21780,43,43000000,01,U,"Evansville, IN-KY",Transportation and Utilities,"Transportation, Warehousing, and Utilities","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18217805000000001,18,21780,50,50000000,01,U,"Evansville, IN-KY",Information,Information,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18217805500000001,18,21780,55,55000000,01,U,"Evansville, IN-KY",Financial Activities,Financial Activities,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18217806000000001,18,21780,60,60000000,01,U,"Evansville, IN-KY",Professional and Business Services,Professional and Business Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18217806500000001,18,21780,65,65000000,01,U,"Evansville, IN-KY",Education and Health Services,Education and Health Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18217807000000001,18,21780,70,70000000,01,U,"Evansville, IN-KY",Leisure and Hospitality,Leisure and Hospitality,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18217808000000001,18,21780,80,80000000,01,U,"Evansville, IN-KY",Other Services,Other Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18217809091000001,18,21780,90,90910000,01,U,"Evansville, IN-KY",Government,Federal Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18217809092000001,18,21780,90,90920000,01,U,"Evansville, IN-KY",Government,State Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18217809093000001,18,21780,90,90930000,01,U,"Evansville, IN-KY",Government,Local Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18230600000000001,18,23060,00,00000000,01,U,"Fort Wayne, IN",Total Nonfarm,Total Nonfarm,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18230601500000001,18,23060,15,15000000,01,U,"Fort Wayne, IN","Mining, Logging, and Construction","Mining, Logging and Construction","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18230603000000001,18,23060,30,30000000,01,U,"Fort Wayne, IN",Manufacturing,Manufacturing,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18230604100000001,18,23060,41,41000000,01,U,"Fort Wayne, IN",Wholesale Trade,Wholesale Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18230604200000001,18,23060,42,42000000,01,U,"Fort Wayne, IN",Retail Trade,Retail Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18230604300000001,18,23060,43,43000000,01,U,"Fort Wayne, IN",Transportation and Utilities,"Transportation, Warehousing, and Utilities","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18230605000000001,18,23060,50,50000000,01,U,"Fort Wayne, IN",Information,Information,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18230605500000001,18,23060,55,55000000,01,U,"Fort Wayne, IN",Financial Activities,Financial Activities,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18230606000000001,18,23060,60,60000000,01,U,"Fort Wayne, IN",Professional and Business Services,Professional and Business Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18230606500000001,18,23060,65,65000000,01,U,"Fort Wayne, IN",Education and Health Services,Education and Health Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18230607000000001,18,23060,70,70000000,01,U,"Fort Wayne, IN",Leisure and Hospitality,Leisure and Hospitality,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18230608000000001,18,23060,80,80000000,01,U,"Fort Wayne, IN",Other Services,Other Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18230609091000001,18,23060,90,90910000,01,U,"Fort Wayne, IN",Government,Federal Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18230609092000001,18,23060,90,90920000,01,U,"Fort Wayne, IN",Government,State Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18230609093000001,18,23060,90,90930000,01,U,"Fort Wayne, IN",Government,Local Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18238440000000001,18,23844,00,00000000,01,U,"Gary, IN Metropolitan Division",Total Nonfarm,Total Nonfarm,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18238441500000001,18,23844,15,15000000,01,U,"Gary, IN Metropolitan Division","Mining, Logging, and Construction","Mining, Logging and Construction","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18238443000000001,18,23844,30,30000000,01,U,"Gary, IN Metropolitan Division",Manufacturing,Manufacturing,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18238444100000001,18,23844,41,41000000,01,U,"Gary, IN Metropolitan Division",Wholesale Trade,Wholesale Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18238444200000001,18,23844,42,42000000,01,U,"Gary, IN Metropolitan Division",Retail Trade,Retail Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18238444300000001,18,23844,43,43000000,01,U,"Gary, IN Metropolitan Division",Transportation and Utilities,"Transportation, Warehousing, and Utilities","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18238445000000001,18,23844,50,50000000,01,U,"Gary, IN Metropolitan Division",Information,Information,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18238445500000001,18,23844,55,55000000,01,U,"Gary, IN Metropolitan Division",Financial Activities,Financial Activities,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18238446000000001,18,23844,60,60000000,01,U,"Gary, IN Metropolitan Division",Professional and Business Services,Professional and Business Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18238446500000001,18,23844,65,65000000,01,U,"Gary, IN Metropolitan Division",Education and Health Services,Education and Health Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18238447000000001,18,23844,70,70000000,01,U,"Gary, IN Metropolitan Division",Leisure and Hospitality,Leisure and Hospitality,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18238448000000001,18,23844,80,80000000,01,U,"Gary, IN Metropolitan Division",Other Services,Other Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18238449091000001,18,23844,90,90910000,01,U,"Gary, IN Metropolitan Division",Government,Federal Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18238449092000001,18,23844,90,90920000,01,U,"Gary, IN Metropolitan Division",Government,State Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18238449093000001,18,23844,90,90930000,01,U,"Gary, IN Metropolitan Division",Government,Local Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18269000000000001,18,26900,00,00000000,01,U,"Indianapolis-Carmel-Anderson, IN",Total Nonfarm,Total Nonfarm,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18269001500000001,18,26900,15,15000000,01,U,"Indianapolis-Carmel-Anderson, IN","Mining, Logging, and Construction","Mining, Logging and Construction","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18269003000000001,18,26900,30,30000000,01,U,"Indianapolis-Carmel-Anderson, IN",Manufacturing,Manufacturing,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18269004100000001,18,26900,41,41000000,01,U,"Indianapolis-Carmel-Anderson, IN",Wholesale Trade,Wholesale Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18269004200000001,18,26900,42,42000000,01,U,"Indianapolis-Carmel-Anderson, IN",Retail Trade,Retail Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18269004300000001,18,26900,43,43000000,01,U,"Indianapolis-Carmel-Anderson, IN",Transportation and Utilities,"Transportation, Warehousing, and Utilities","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18269005000000001,18,26900,50,50000000,01,U,"Indianapolis-Carmel-Anderson, IN",Information,Information,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18269005500000001,18,26900,55,55000000,01,U,"Indianapolis-Carmel-Anderson, IN",Financial Activities,Financial Activities,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18269006000000001,18,26900,60,60000000,01,U,"Indianapolis-Carmel-Anderson, IN",Professional and Business Services,Professional and Business Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18269006500000001,18,26900,65,65000000,01,U,"Indianapolis-Carmel-Anderson, IN",Education and Health Services,Education and Health Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18269007000000001,18,26900,70,70000000,01,U,"Indianapolis-Carmel-Anderson, IN",Leisure and Hospitality,Leisure and Hospitality,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18269008000000001,18,26900,80,80000000,01,U,"Indianapolis-Carmel-Anderson, IN",Other Services,Other Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18269009091000001,18,26900,90,90910000,01,U,"Indianapolis-Carmel-Anderson, IN",Government,Federal Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18269009092000001,18,26900,90,90920000,01,U,"Indianapolis-Carmel-Anderson, IN",Government,State Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18269009093000001,18,26900,90,90930000,01,U,"Indianapolis-Carmel-Anderson, IN",Government,Local Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18290200000000001,18,29020,00,00000000,01,U,"Kokomo, IN",Total Nonfarm,Total Nonfarm,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18290201500000001,18,29020,15,15000000,01,U,"Kokomo, IN","Mining, Logging, and Construction","Mining, Logging and Construction","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18290203000000001,18,29020,30,30000000,01,U,"Kokomo, IN",Manufacturing,Manufacturing,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18290204100000001,18,29020,41,41000000,01,U,"Kokomo, IN",Wholesale Trade,Wholesale Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18290204200000001,18,29020,42,42000000,01,U,"Kokomo, IN",Retail Trade,Retail Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18290204300000001,18,29020,43,43000000,01,U,"Kokomo, IN",Transportation and Utilities,"Transportation, Warehousing, and Utilities","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18290205000000001,18,29020,50,50000000,01,U,"Kokomo, IN",Information,Information,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18290205500000001,18,29020,55,55000000,01,U,"Kokomo, IN",Financial Activities,Financial Activities,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18290207000000001,18,29020,70,70000000,01,U,"Kokomo, IN",Leisure and Hospitality,Leisure and Hospitality,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18290208000000001,18,29020,80,80000000,01,U,"Kokomo, IN",Other Services,Other Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18290209093000001,18,29020,90,90930000,01,U,"Kokomo, IN",Government,Local Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18292000000000001,18,29200,00,00000000,01,U,"Lafayette-West Lafayette, IN",Total Nonfarm,Total Nonfarm,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18292001500000001,18,29200,15,15000000,01,U,"Lafayette-West Lafayette, IN","Mining, Logging, and Construction","Mining, Logging and Construction","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18292003000000001,18,29200,30,30000000,01,U,"Lafayette-West Lafayette, IN",Manufacturing,Manufacturing,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18292004100000001,18,29200,41,41000000,01,U,"Lafayette-West Lafayette, IN",Wholesale Trade,Wholesale Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18292004200000001,18,29200,42,42000000,01,U,"Lafayette-West Lafayette, IN",Retail Trade,Retail Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18292004300000001,18,29200,43,43000000,01,U,"Lafayette-West Lafayette, IN",Transportation and Utilities,"Transportation, Warehousing, and Utilities","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18292005000000001,18,29200,50,50000000,01,U,"Lafayette-West Lafayette, IN",Information,Information,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18292005500000001,18,29200,55,55000000,01,U,"Lafayette-West Lafayette, IN",Financial Activities,Financial Activities,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18292006000000001,18,29200,60,60000000,01,U,"Lafayette-West Lafayette, IN",Professional and Business Services,Professional and Business Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18292006500000001,18,29200,65,65000000,01,U,"Lafayette-West Lafayette, IN",Education and Health Services,Education and Health Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18292007000000001,18,29200,70,70000000,01,U,"Lafayette-West Lafayette, IN",Leisure and Hospitality,Leisure and Hospitality,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18292008000000001,18,29200,80,80000000,01,U,"Lafayette-West Lafayette, IN",Other Services,Other Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18292009091000001,18,29200,90,90910000,01,U,"Lafayette-West Lafayette, IN",Government,Federal Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18292009092000001,18,29200,90,90920000,01,U,"Lafayette-West Lafayette, IN",Government,State Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18292009093000001,18,29200,90,90930000,01,U,"Lafayette-West Lafayette, IN",Government,Local Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18331400000000001,18,33140,00,00000000,01,U,"Michigan City-La Porte, IN",Total Nonfarm,Total Nonfarm,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18331401500000001,18,33140,15,15000000,01,U,"Michigan City-La Porte, IN","Mining, Logging, and Construction","Mining, Logging and Construction","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18331403000000001,18,33140,30,30000000,01,U,"Michigan City-La Porte, IN",Manufacturing,Manufacturing,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18331404100000001,18,33140,41,41000000,01,U,"Michigan City-La Porte, IN",Wholesale Trade,Wholesale Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18331404200000001,18,33140,42,42000000,01,U,"Michigan City-La Porte, IN",Retail Trade,Retail Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18331405000000001,18,33140,50,50000000,01,U,"Michigan City-La Porte, IN",Information,Information,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18331405500000001,18,33140,55,55000000,01,U,"Michigan City-La Porte, IN",Financial Activities,Financial Activities,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18331406000000001,18,33140,60,60000000,01,U,"Michigan City-La Porte, IN",Professional and Business Services,Professional and Business Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18331406500000001,18,33140,65,65000000,01,U,"Michigan City-La Porte, IN",Education and Health Services,Education and Health Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18331407000000001,18,33140,70,70000000,01,U,"Michigan City-La Porte, IN",Leisure and Hospitality,Leisure and Hospitality,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18331408000000001,18,33140,80,80000000,01,U,"Michigan City-La Porte, IN",Other Services,Other Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18331409091000001,18,33140,90,90910000,01,U,"Michigan City-La Porte, IN",Government,Federal Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18331409092000001,18,33140,90,90920000,01,U,"Michigan City-La Porte, IN",Government,State Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18331409093000001,18,33140,90,90930000,01,U,"Michigan City-La Porte, IN",Government,Local Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18346200000000001,18,34620,00,00000000,01,U,"Muncie, IN",Total Nonfarm,Total Nonfarm,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18346201500000001,18,34620,15,15000000,01,U,"Muncie, IN","Mining, Logging, and Construction","Mining, Logging and Construction","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18346203000000001,18,34620,30,30000000,01,U,"Muncie, IN",Manufacturing,Manufacturing,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18346204100000001,18,34620,41,41000000,01,U,"Muncie, IN",Wholesale Trade,Wholesale Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18346204200000001,18,34620,42,42000000,01,U,"Muncie, IN",Retail Trade,Retail Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18346204300000001,18,34620,43,43000000,01,U,"Muncie, IN",Transportation and Utilities,"Transportation, Warehousing, and Utilities","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18346205000000001,18,34620,50,50000000,01,U,"Muncie, IN",Information,Information,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18346205500000001,18,34620,55,55000000,01,U,"Muncie, IN",Financial Activities,Financial Activities,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18346206500000001,18,34620,65,65000000,01,U,"Muncie, IN",Education and Health Services,Education and Health Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18346207000000001,18,34620,70,70000000,01,U,"Muncie, IN",Leisure and Hospitality,Leisure and Hospitality,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18346208000000001,18,34620,80,80000000,01,U,"Muncie, IN",Other Services,Other Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18346209092000001,18,34620,90,90920000,01,U,"Muncie, IN",Government,State Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18346209093000001,18,34620,90,90930000,01,U,"Muncie, IN",Government,Local Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18437800000000001,18,43780,00,00000000,01,U,"South Bend-Mishawaka, IN-MI",Total Nonfarm,Total Nonfarm,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18437801500000001,18,43780,15,15000000,01,U,"South Bend-Mishawaka, IN-MI","Mining, Logging, and Construction","Mining, Logging and Construction","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18437803000000001,18,43780,30,30000000,01,U,"South Bend-Mishawaka, IN-MI",Manufacturing,Manufacturing,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18437804100000001,18,43780,41,41000000,01,U,"South Bend-Mishawaka, IN-MI",Wholesale Trade,Wholesale Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18437804200000001,18,43780,42,42000000,01,U,"South Bend-Mishawaka, IN-MI",Retail Trade,Retail Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18437804300000001,18,43780,43,43000000,01,U,"South Bend-Mishawaka, IN-MI",Transportation and Utilities,"Transportation, Warehousing, and Utilities","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18437805000000001,18,43780,50,50000000,01,U,"South Bend-Mishawaka, IN-MI",Information,Information,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18437805500000001,18,43780,55,55000000,01,U,"South Bend-Mishawaka, IN-MI",Financial Activities,Financial Activities,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18437806000000001,18,43780,60,60000000,01,U,"South Bend-Mishawaka, IN-MI",Professional and Business Services,Professional and Business Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18437806500000001,18,43780,65,65000000,01,U,"South Bend-Mishawaka, IN-MI",Education and Health Services,Education and Health Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18437807000000001,18,43780,70,70000000,01,U,"South Bend-Mishawaka, IN-MI",Leisure and Hospitality,Leisure and Hospitality,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18437808000000001,18,43780,80,80000000,01,U,"South Bend-Mishawaka, IN-MI",Other Services,Other Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18437809091000001,18,43780,90,90910000,01,U,"South Bend-Mishawaka, IN-MI",Government,Federal Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18437809092000001,18,43780,90,90920000,01,U,"South Bend-Mishawaka, IN-MI",Government,State Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18437809093000001,18,43780,90,90930000,01,U,"South Bend-Mishawaka, IN-MI",Government,Local Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18454600000000001,18,45460,00,00000000,01,U,"Terre Haute, IN",Total Nonfarm,Total Nonfarm,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18454601500000001,18,45460,15,15000000,01,U,"Terre Haute, IN","Mining, Logging, and Construction","Mining, Logging and Construction","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18454603000000001,18,45460,30,30000000,01,U,"Terre Haute, IN",Manufacturing,Manufacturing,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18454604100000001,18,45460,41,41000000,01,U,"Terre Haute, IN",Wholesale Trade,Wholesale Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18454604200000001,18,45460,42,42000000,01,U,"Terre Haute, IN",Retail Trade,Retail Trade,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18454604300000001,18,45460,43,43000000,01,U,"Terre Haute, IN",Transportation and Utilities,"Transportation, Warehousing, and Utilities","All Employees, In Thousands",Not Seasonally Adjusted
+SMU18454605000000001,18,45460,50,50000000,01,U,"Terre Haute, IN",Information,Information,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18454605500000001,18,45460,55,55000000,01,U,"Terre Haute, IN",Financial Activities,Financial Activities,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18454606000000001,18,45460,60,60000000,01,U,"Terre Haute, IN",Professional and Business Services,Professional and Business Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18454606500000001,18,45460,65,65000000,01,U,"Terre Haute, IN",Education and Health Services,Education and Health Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18454607000000001,18,45460,70,70000000,01,U,"Terre Haute, IN",Leisure and Hospitality,Leisure and Hospitality,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18454608000000001,18,45460,80,80000000,01,U,"Terre Haute, IN",Other Services,Other Services,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18454609091000001,18,45460,90,90910000,01,U,"Terre Haute, IN",Government,Federal Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18454609092000001,18,45460,90,90920000,01,U,"Terre Haute, IN",Government,State Government,"All Employees, In Thousands",Not Seasonally Adjusted
+SMU18454609093000001,18,45460,90,90930000,01,U,"Terre Haute, IN",Government,Local Government,"All Employees, In Thousands",Not Seasonally Adjusted
