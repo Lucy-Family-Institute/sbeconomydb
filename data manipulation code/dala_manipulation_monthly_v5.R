@@ -8,8 +8,7 @@ library(rvest)
 library(lubridate)
 library(readxl)
 library(tidycensus)
-library(rvest)
-
+library(httr)
 
 #### Job skills in demand ####
 latest_date <- list.files("raw data/South Bend MSA/Jobs/update once a month/Advertised Job Skills/") %>% my() %>% max()
