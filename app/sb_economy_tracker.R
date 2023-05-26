@@ -11,7 +11,14 @@ library(sf)
 library(economiccomplexity) # for computing economic complexity
 library(networkD3)
 library(DT) # for searchable tables
+
+#Wordcloud v 0.2
+#install.packages("remotes")
+#library(remotes)
+#install_version("wordcloud2", version = "0.2.0", repos = "http://cran.us.r-project.org")
+
 library(wordcloud2)
+
 library(png)
 
 # http://www.incontext.indiana.edu/2005/november/7.asp#:~:text=The%20best%20way%20to%20distinguish,establishment%20taken%20from%20payroll%20records.

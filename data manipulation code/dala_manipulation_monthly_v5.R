@@ -8,6 +8,8 @@ library(rvest)
 library(lubridate)
 library(readxl)
 library(tidycensus)
+library(rvest)
+
 
 #### Job skills in demand ####
 latest_date <- list.files("raw data/South Bend MSA/Jobs/update once a month/Advertised Job Skills/") %>% my() %>% max()
@@ -90,8 +92,6 @@ bind_rows(certifications_jobs_sb,certifications_jobs_eg)%>%
 rm(certifications_jobs_sb,certifications_jobs_eg,file_name,latest_date)
 
 #### monthly change in unemployed and jobs ####
-library(rvest)
-
 unemp_job_openings_sb <- lapply(list.files("raw data/South Bend MSA/Demand and Supply/update once a month/Number of Unemployed per Job Opening", full.names = T), function(x) {
   print(x)
   read_html(x) %>%
@@ -169,8 +169,14 @@ rm(snap_tanf_df)
 
 #### Current Employment Survey ####
 # all series for indiana
-in_series <- read_delim("https://download.bls.gov/pub/time.series/sm/sm.data.15.Indiana", 
-                        "\t", escape_double = FALSE, trim_ws = TRUE) %>%
+#in_series <- read_delim("https://download.bls.gov/pub/time.series/sm/sm.data.15.Indiana", 
+#                        "\t", escape_double = FALSE, trim_ws = TRUE) %>%
+#  mutate(value=value*1000) # values are in thousands
+
+#5/23 - Workaround to prevent blocking by BLS (mh)
+
+in_series <- read_delim(GET('https://download.bls.gov/pub/time.series/sm/sm.data.15.Indiana', user_agent("user@gmail.com")) %>%
+  content(as = 'text'), "\t", escape_double = F, trim_ws=T) %>%
   mutate(value=value*1000) # values are in thousands
 
 selected_series_sb_elk_msa <- read_csv("raw data/selected_ces_series_sb_elk_msa.csv")
@@ -185,7 +191,7 @@ sb_elk_ces_supersectors <- in_series %>%
 
 sb_elk_ces_supersectors$dt %>% max() # "2022-12-01" # latest date
 
-rm(in_series,selected_series_sb_elk_msa)
+#rm(in_series,selected_series_sb_elk_msa)
 
 pre_covid_dt=ymd(paste0("2019-",month(max(sb_elk_ces_supersectors$dt)),"-01"))
 
@@ -220,8 +226,8 @@ rm(sb_elk_ces_sup,pre_covid_dt,sb_elk_ces_supersectors)
 
 # ces wage
 # all series for indiana
-in_series <- read_delim("https://download.bls.gov/pub/time.series/sm/sm.data.15.Indiana", 
-                        "\t", escape_double = FALSE, trim_ws = TRUE)
+#in_series <- read_delim("https://download.bls.gov/pub/time.series/sm/sm.data.15.Indiana", 
+#                        "\t", escape_double = FALSE, trim_ws = TRUE)
 
 selected_series_sb_elk_msa_wage <- read_rds("raw data/selected_series_sb_elk_msa_wage.Rds")
 
@@ -236,7 +242,7 @@ sb_elk_ces_supersectors_wage <- in_series %>%
 
 sb_elk_ces_supersectors_wage$dt %>% max() # "2022-12-01" # latest date
 
-rm(in_series,selected_series_sb_elk_msa_wage)
+#rm(in_series,selected_series_sb_elk_msa_wage)
 
 pre_covid_dt=ymd(paste0("2019-",month(max(sb_elk_ces_supersectors_wage$dt)),"-01"))
 
@@ -259,13 +265,21 @@ rm(sb_elk_ces_supersectors_wage)
 
 # labor force and employment
 # read all the laus data for indiana
-laus_in <- read_delim("https://download.bls.gov/pub/time.series/la/la.data.21.Indiana", 
-                      "\t", escape_double = FALSE, trim_ws = TRUE)
+#laus_in <- read_delim("https://download.bls.gov/pub/time.series/la/la.data.21.Indiana", 
+#                      "\t", escape_double = FALSE, trim_ws = TRUE)
+
+#5/23 - Workaround to prevent blocking by BLS (mh)
+
+laus_in <- read_delim(GET('https://download.bls.gov/pub/time.series/la/la.data.21.Indiana', user_agent("user@gmail.com")) %>%
+                          content(as = 'text'), "\t", escape_double = F, trim_ws=T)
 
 # now I need to identify series for sb-mishawaka
 # area types
-laus_series <- read_delim("https://download.bls.gov/pub/time.series/la/la.series", 
-                          "\t", escape_double = FALSE, trim_ws = TRUE)
+#laus_series <- read_delim("https://download.bls.gov/pub/time.series/la/la.series", 
+#                          "\t", escape_double = FALSE, trim_ws = TRUE)
+
+laus_series <- read_delim(GET('https://download.bls.gov/pub/time.series/la/la.series', user_agent("user@gmail.com")) %>%
+                        content(as = 'text'), "\t", escape_double = F, trim_ws=T)
 
 select_series <- laus_series %>% filter(area_type_code=="B", srd_code==18)
 
@@ -277,7 +291,7 @@ laus_select_areas <- laus_in %>% filter(series_id %in% select_series$series_id)%
 
 laus_select_areas$dt %>% max() # "2022-12-01"
 
-rm(laus_in,laus_series,select_series)
+#rm(laus_in,laus_series,select_series)
 
 pre_covid_dt=ymd(paste0("2019-",month(max(laus_select_areas$dt)),"-01"))
 
@@ -309,7 +323,6 @@ rm(laus_select_areas,laus_select,pre_covid_dt, sb_elk_ces_sup_wage)
 
 
 #### housing ####
-library(rvest)
 
 # read all available files
 all_file_names <- read_html("https://www2.census.gov/econ/bps/Metro/") %>%

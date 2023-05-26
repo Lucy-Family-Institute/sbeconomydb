@@ -9,6 +9,8 @@ library(lubridate)
 library(readxl)
 library(tidycensus)
 
+setwd("C:/Users/mhauenst/Documents/sbeconomydb")
+
 # Data manipulation
 #### Jobs ####
 total_openings_1 <- lapply(list.files("./raw data/South Bend MSA/Jobs/Jobs Available", full.names = T), function(x) {
