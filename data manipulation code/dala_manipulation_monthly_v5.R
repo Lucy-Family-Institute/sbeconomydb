@@ -329,7 +329,7 @@ all_file_names <- read_html("https://www2.census.gov/econ/bps/Metro/") %>%
   html_text() %>% .[-1] # 1st element is "parent directory"
 
 # select files starting 2019
-recent_file_names <- all_file_names[all_file_names %>% str_detect("ma19[0-9][0-9]c.txt|ma20[0-9][0-9]c.txt|ma21[0-9][0-9]c.txt|ma22[0-9][0-9]c.txt")]
+recent_file_names <- all_file_names[all_file_names %>% str_detect("ma19[0-9][0-9]c.txt|ma20[0-9][0-9]c.txt|ma21[0-9][0-9]c.txt|ma22[0-9][0-9]c.txt|ma23[0-9][0-9]c.txt")]
 
 links <- paste0("https://www2.census.gov/econ/bps/Metro/",recent_file_names) # c is for current
 
