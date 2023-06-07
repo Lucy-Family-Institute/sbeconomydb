@@ -88,7 +88,7 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                                  title = "Sponsor", height = "50px"),
                                              style = "padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px;"),
                                            class = "dropdown"),
-                                   
+
                                    tags$li(a(href = 'http://www.pulte.nd.edu',
                                              img(src = 'logo.png',
                                                  title = "Company Home", height = "50px"),
@@ -111,7 +111,7 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                 #menuSubItem("Glossary", tabName = "glossary", icon = icon("glasses"))
                                 )
                        ), # use collapsed = TRUE to hide dashboard menu
-                     
+
                    width = 300), # end of sidebar
                    # Body content
                    dashboardBody(
@@ -134,13 +134,13 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                  valueBoxOutput("totalcandidatebox", width = 3),
                                  valueBoxOutput("candidatechangebox", width = 3)
                                ),
-                               
+
                                fluidRow(
                                  column(
-                                   p("The graphs show the daily number of job openings and the number of candidates looking for a job. 
+                                   p("The graphs show the daily number of job openings and the number of candidates looking for a job.
                                      The jobs can be disaggregated into industry groups and the number of candidates can be disaggregated into occupation type.",
                                      br(),br(),
-                                     "In a healthy labor market, there are at least as many jobs as people looking for them. 
+                                     "In a healthy labor market, there are at least as many jobs as people looking for them.
                                      The ratio of the number of candidates to jobs less than or equal to 1 suggests enough jobs for everyone.",
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
                                    width=8),
@@ -159,18 +159,18 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                ),
                                width=8)),
                                fluidRow(
-                                 box(plotlyOutput(outputId = 'jobPlot'), 
+                                 box(plotlyOutput(outputId = 'jobPlot'),
                                      radioButtons("abs_per", "Select Y axis",
                                                   c("Total"="Job Openings",
                                                     "Percentage Change"="per_change"),
                                                   inline = T),
                                      radioButtons("ind", "Select Industry or education",
                                                   c("All Industries"="Total Openings",
-                                                    "Health Care and Social Assistance"="Health Care and Social Assistance",                                       
-                                                    "Retail Trade"="Retail Trade",                                                            
-                                                    "Accommodation and Food Services"="Accommodation and Food Services",                                         
-                                                    "Transportation and Warehousing"="Transportation and Warehousing",                                          
-                                                    "Manufacturing"="Manufacturing",                                                           
+                                                    "Health Care and Social Assistance"="Health Care and Social Assistance",
+                                                    "Retail Trade"="Retail Trade",
+                                                    "Accommodation and Food Services"="Accommodation and Food Services",
+                                                    "Transportation and Warehousing"="Transportation and Warehousing",
+                                                    "Manufacturing"="Manufacturing",
                                                     "Less than High School"="Less than High School",
                                                     "High School Diploma or Equivalent"="High School Diploma or Equivalent",
                                                     "Bachelor's Degree"="Bachelor's Degree",
@@ -184,8 +184,8 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                                   c("All Occupations"="Total Candidates",
                                                     "Production Occupations"="Production Occupations",
                                                     "Office and Administrative Support Occupations"="Office and Administrative Support Occupations",
-                                                    "Management Occupations"="Management Occupations",	
-                                                    "Transportation and Material Moving Occupations"="Transportation and Material Moving Occupations",	
+                                                    "Management Occupations"="Management Occupations",
+                                                    "Transportation and Material Moving Occupations"="Transportation and Material Moving Occupations",
                                                     "Sales and Related Occupations"="Sales and Related Occupations",
                                                     "Less than High School"="Less than High School",
                                                     "High School Diploma or Equivalent"="High School Diploma or Equivalent",
@@ -198,7 +198,7 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                  box(plotlyOutput(outputId = 'candoccgrpPlot'), width = 6)
                                )
                        ),
-                       
+
                        tabItem(tabName = "emp_unemp",
                                fluidRow(
                                  column(
@@ -239,8 +239,8 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
                                    width=6)
                                ),
-                               
-                               fluidRow(box(plotlyOutput('cesPlot_new'), 
+
+                               fluidRow(box(plotlyOutput('cesPlot_new'),
                                             p("Current month = ", format(max(small_ces$dt),"%b, %Y")),
                                             dataTableOutput('small_ces'), width = 6),
                                         box(plotlyOutput(outputId = 'lausPlot'),
@@ -266,24 +266,24 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                  valueBoxOutput("totalevictionbox", width = 3),
                                  valueBoxOutput("evictionchangebox", width = 3)
                                ),
-                               
+
                                fluidRow(
                                  column(
                                    br(),
                                    p("A good indicator for how well the economy is doing is to see how the housing construction activity is performing.
-                                   The graph shows the number of new housing permits issued in SB-Mishawaka MSA. 
+                                   The graph shows the number of new housing permits issued in SB-Mishawaka MSA.
                                      The number has been fairly constant across 2019-2020, suggesting that COVID did not decrease house construction activity.",
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
                                    width=6),
                                  column(
                                    br(),
-                                   p("The graph shows the number of eviction filings in South Bend, IN for the current year and average for the years 2016-19. 
-                                     The shaded regions are where there were orders against eviction in effect. 
+                                   p("The graph shows the number of eviction filings in South Bend, IN for the current year and average for the years 2016-19.
+                                     The shaded regions are where there were orders against eviction in effect.
                                      Here too, the number of eviction filings are lower in 2020 as compared to average of 2016-19 suggesting that the stay on evictions helped in reducing the filings.",
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
                                    width=6)
                                ),
-                               
+
                                fluidRow(box(plotlyOutput(outputId = 'housingPlot'),
                                             radioButtons("abs_per_housing", "Select Y axis",
                                                          c("Total"="total",
@@ -326,7 +326,7 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                                            "Percentage Change"="per_change"), inline = T),
                                             width=6)
                                )
-                               
+
                                ),
                        tabItem(tabName = "business_activity",
                                fluidRow(
@@ -345,11 +345,11 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                fluidRow(
                                  column(
                                    br(),
-                                   p("Below is a wordcloud of employers currently hiring.", 
+                                   p("Below is a wordcloud of employers currently hiring.",
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),width=6),
                                  column(
                                    br(),
-                                   p("Occupations in demand in",format(unique(jobs_occupations$dt),"%B %d, %Y"),".", 
+                                   p("Occupations in demand in",format(unique(jobs_occupations$dt),"%B %d, %Y"),".",
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),width=6)
                                ),
                                fluidRow(box(wordcloud2Output(outputId = 'employers_wordcloud'), # wordcloud 0.2.1 seems to supress running plotly. do not update this package
@@ -364,7 +364,7 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),width=6),
                                  column(
                                    br(),
-                                   p("Top 10 Tools and Technology in demand in",format(max(tools_jobs$dt),"%B %Y"),".", 
+                                   p("Top 10 Tools and Technology in demand in",format(max(tools_jobs$dt),"%B %Y"),".",
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),width=6)
                                ),
                                fluidRow(box(plotlyOutput(outputId = 'skillsPlot'),
@@ -375,11 +375,11 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                fluidRow(
                                  column(
                                    br(),
-                                   p("Search for skills by typing in the box.", 
+                                   p("Search for skills by typing in the box.",
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),width=6),
                                  column(
                                    br(),
-                                   p("Search for tools and technologies by typing in the box.", 
+                                   p("Search for tools and technologies by typing in the box.",
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),width=6)
                                ),
                                fluidRow(box(DTOutput("skillstable"),width=6),
@@ -388,11 +388,11 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                fluidRow(
                                  column(
                                    br(),
-                                   p("The graph shows the number of business licenses issued in South Bend, IN.", 
+                                   p("The graph shows the number of business licenses issued in South Bend, IN.",
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),width=6),
                                  column(
                                    br(),
-                                   p("Top 10 Certifications in demand in",format(unique(certifications_jobs$dt),"%B %Y"),".", 
+                                   p("Top 10 Certifications in demand in",format(unique(certifications_jobs$dt),"%B %Y"),".",
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),width=6)
                                ),
                                fluidRow(box(plotlyOutput(outputId = 'businessactivityPlot'),
@@ -448,14 +448,14 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                fluidRow(
                                  column(
                                    br(),
-                                   p("The graph below shows the employment in different sectors in SB-Mishawaka MSA. 
+                                   p("The graph below shows the employment in different sectors in SB-Mishawaka MSA.
                                      The size of the boxes is proportional to the number of people employed by the industry.
                                      The largest sectors are Manufacturing, Accommodation and Food Services, and Retail Trade.",
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
                                    width=6),
                                  column(
                                    br(),
-                                   p("The graph below shows the employment in different occupations in SB-Mishawaka MSA. 
+                                   p("The graph below shows the employment in different occupations in SB-Mishawaka MSA.
                                    The size of the boxes is proportional to the number of people employed in the occupation.
                                    The most common occupations are Office and Administrative Support Occupations, Sales and Related Occupations, Food Preparation and Serving Related Occupations and Production Occupations.",
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
@@ -464,7 +464,7 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                fluidRow(box(plotlyOutput(outputId = 'industryPlot'), width = 6),
                                    box(plotlyOutput(outputId = 'occupationPlot'), width = 6)
                                    )
-                               
+
                                ),
                        tabItem(tabName = "about",
                                fluidRow(
@@ -483,14 +483,14 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                      br(),br(),
                                      "The Economy tracker data will be updated monthly.",
                                      br(),br(),
-                                     #"The Economic Complexity Analysis was originally developed by Hausmann et al. (2014) to understand growth potential for countries. The methodology was adapted for metro areas by Escobari et al. (2019). 
+                                     #"The Economic Complexity Analysis was originally developed by Hausmann et al. (2014) to understand growth potential for countries. The methodology was adapted for metro areas by Escobari et al. (2019).
                                      #The website design is influenced by ",tags$a(href = "https://atlas.cid.harvard.edu/", "Atlas of Economic Complexity"),
                                      #br(),br(),
                                      "All the data and the code is available ",tags$a(href = "https://github.com/Lucy-Family-Institute/sbeconomydb", "here."),
                                      #"For any feedback/questions, please ",tags$a(href = "mailto:smotghare@nd.edu", "contact us."),
                                      br(),br(),
                                      "Citation:",
-                                     br(), 
+                                     br(),
                                      "The Lucy Family Institute for Data & Society. (2022). South Bend Economy Database. https://pulte.shinyapps.io/sbeconomydb/",
                                      #br(),br(),
                                      #"Download newsletter ",tags$a(href = "my-report.pdf", "here"),
@@ -527,7 +527,7 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                      tags$a(href = "https://evictionlab.org/", "The Eviction Lab"),br(),
                                      tags$a(href = "https://southbendin.gov/", "The City of South Bend"),br(),
                                      tags$a(href = "https://www.zillow.com/", "Zillow"),br(),
-                                     
+
                                      style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
                                    width=12)
                                )
@@ -537,7 +537,7 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                   column(
                                     #br(),
                                     #h4(
-                                    #  "Please bookmark new web address:", tags$a(href = "https://lucyapps.shinyapps.io/sbeconomydb/", "https://lucyapps.shinyapps.io/sbeconomydb/"),br(), 
+                                    #  "Please bookmark new web address:", tags$a(href = "https://lucyapps.shinyapps.io/sbeconomydb/", "https://lucyapps.shinyapps.io/sbeconomydb/"),br(),
                                     #  style="text-align:justify;color:black;background-color:pink;padding:15px;border-radius:10px"
                                     #),
                                     h1("South Bend Economy Database",
@@ -551,25 +551,25 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                   column(
                                     box(
                                       status = "primary", solidHeader = F, width = 12,
-                                      imageOutput("myImage", height = "auto", width = "auto")), 
+                                      imageOutput("myImage", height = "auto", width = "auto")),
                                     width = 6)
                                 ),
-                                
+
                                 fluidRow(
                                   column(leafletOutput(outputId = 'mapPlot_msa'),width = 6),
                                   column(
                                     br(),
-                                    p("South Bend-Mishawaka Metropolitan Statistical Area (SB-Mishawaka MSA), sometimes referred to as Michiana, 
-                                     is an area consisting of two counties - one in northern Indiana (St. Joseph) and one in southwest Michigan (Cass). 
+                                    p("South Bend-Mishawaka Metropolitan Statistical Area (SB-Mishawaka MSA), sometimes referred to as Michiana,
+                                     is an area consisting of two counties - one in northern Indiana (St. Joseph) and one in southwest Michigan (Cass).
                                      It is anchored by the cities of South Bend and Mishawaka in Indiana.", br(), br(),
                                       "It has a population of 323,613 (as of 2019) and has a 216 th largest GDP among all MSAs (as of 2018).",br(), br(),
-                                      "With an Economic Complexity Index (ECI) of 0.0691, it ranks as the 243rd most complex MSA in the ECI ranking of 388 MSAs. 
+                                      "With an Economic Complexity Index (ECI) of 0.0691, it ranks as the 243rd most complex MSA in the ECI ranking of 388 MSAs.
                                      Compared to five years prior, SB-Mishawaka MSA's economy has become less complex, worsening 8 positions in the ECI ranking.",br(), br(),
                                       "Click on the links in the left pane to explore the region.",
                                       style="text-align:justify;color:black;background-color:lavender;padding:15px;border-radius:10px"),
                                     width=6)
-                                  
-                                
+
+
                                 )
                                 )#,
                        #tabItem(tabName = "glossary",
@@ -593,7 +593,7 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                       #             width=12)
                        #        )
                        #)
-                       
+
                    )
 ) # end of dashboardbody
 ) #end dashboardPage

@@ -6,15 +6,15 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 import time
 
-url = "http://www.indianacareerconnect.com"
 # Function to get all weekly data for MSA
 
 def get_weekly_msa_data(msa):
 # Navigate to Data Page
+    url = "http://www.indianacareerconnect.com"
     driver = webdriver.Firefox()
     driver.get(url)
     driver.find_element("link text", "Find Labor Market Data").click()
-    driver.find_element("link text", "Area Profile").click()
+    driver.find_element(By.XPATH, "//*[starts-with(@id, 'ctl00_Main_content_MenuLandingPage_hlAreaProfile')]").click()
     select = Select(WebDriverWait(driver, 60).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "#ctl00_Main_content_ucLocation_ctlInternalLocationSelection_ddlAreatype"))))
     select.select_by_visible_text('Metropolitan Statistical Area (2013)')
     select_area = Select(WebDriverWait(driver, 60).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "#ctl00_Main_content_ucLocation_ctlInternalLocationSelection_ddlArea"))))

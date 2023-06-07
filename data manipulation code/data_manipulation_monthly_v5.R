@@ -1,6 +1,4 @@
 # this script should be run each month
-
-
 library(tidyverse)
 library(plotly)
 library(readxl)
@@ -9,6 +7,8 @@ library(lubridate)
 library(readxl)
 library(tidycensus)
 library(httr)
+
+setwd("C:/Users/mhauenst/Documents/sbeconomydb/")
 
 #### Job skills in demand ####
 latest_date <- list.files("raw data/South Bend MSA/Jobs/update once a month/Advertised Job Skills/") %>% my() %>% max()
