@@ -40,7 +40,7 @@ a duplicate count. These numbers include institutional investigations.</li>
 <li>Annual averages were created by IBRC using the monthly data and will differ from published reports that are based on a fiscal year. An annual average is not provided when there is no available data for a month in a given year.</li>
 </ol>
 <p class="source">Source: STATS Indiana, using Indiana Family and Social Services Administration data<br/>
-Produced on 6/7/2023 12:13:41 PM
+Produced on 6/7/2023 4:35:52 PM
 </p>
  <!--This version of the footer include is designed for use on the legacy frame-based pages, which are not yet on a template. It differs from the main footer in that it contains the style definitions since the full blueprint framework is not applied to these pages, the container div is called, and the links are full path (in case it's pulled into an excel output) and use target=parent to jump out of the frames-->
 <link rel="stylesheet" href="https://www.stats.indiana.edu/css/footer_legacy_pages.css" type="text/css" media="screen, print" />

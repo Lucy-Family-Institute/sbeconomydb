@@ -5,14 +5,27 @@ library(rvest)
 
 #setwd("C:/Users/smotghar/") # laptop
 downloads<-"C:/Users/mhauenst/Downloads"
-root <- here()
+#root <- here()
+root <- "C:/Users/mhauenst/Documents/sbeconomydb"
 
 jobs_func_monthly <- function(downloads,files) {
   curr_msa<- files[1, "msa"]
   
-  file.copy(from = files[1,1],
+  #The Elkhart and SB folders have differing numbers of year digits for same
+  #jobs folder
+  
+  if (curr_msa =="South Bend MSA"){
+    #If SB use 4 digit year
+    file.copy(from = files[1,1],
             to   = paste0(root, "/raw data/",curr_msa,"/Jobs/update once a month/Monthly Job Count/",format(today(),"%m.%Y"),".xls"),
             overwrite = T)
+  }
+  else {
+    #If not copy 2 digit year for Elkhart
+    file.copy(from = files[1,1],
+              to   = paste0(root, "/raw data/",curr_msa,"/Jobs/update once a month/Monthly Job Count/",format(today(),"%m.%y"),".xls"),
+              overwrite = T)
+  }
   
   file.copy(from = files[2,1],
             to   = paste0(root, "/raw data/",curr_msa,"/Jobs/update once a month/Advertised Job Skills/",format(today(),"%m.%y"),".xls"),

@@ -34,6 +34,7 @@ def get_monthly_msa_data(msa):
     WebDriverWait(driver, 60).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "#optionsToggleLink3"))).click()
     select_100_adskill = Select(WebDriverWait(driver, 60).until(EC.element_to_be_clickable((By.CSS_SELECTOR,"#ctl00_Main_content_ucSectionAdvJobSkills_ucDisplayOptions_ctl03_ddlDataAnalysis"))))
     select_100_adskill.select_by_visible_text("Top 100 Job Skills")
+    time.sleep(30)
     WebDriverWait(driver, 60).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "#ctl00_Main_content_ucSectionAdvJobSkills_divTable > div:nth-child(4) > div:nth-child(4) > div:nth-child(1) > button:nth-child(1)"))).click()
     WebDriverWait(driver, 60).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "ul.show > li:nth-child(1) > a:nth-child(1)"))).click()
     time.sleep(60)
@@ -76,9 +77,5 @@ def get_monthly_msa_data(msa):
         
 
     driver.quit()
-#%%
-get_monthly_msa_data(msa='South Bend-Mishawaka, IN-MI Metropolitan Statistical Area')
 
-#%%
-get_monthly_msa_data(msa='Elkhart-Goshen, IN Metropolitan Statistical Area')
 # %%

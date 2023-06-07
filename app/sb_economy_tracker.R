@@ -491,7 +491,7 @@ ui = dashboardPage(#skin = "black", # blue is default but not too many options
                                      br(),br(),
                                      "Citation:",
                                      br(),
-                                     "The Lucy Family Institute for Data & Society. (2022). South Bend Economy Database. https://pulte.shinyapps.io/sbeconomydb/",
+                                     "The Lucy Family Institute for Data & Society. (2022). South Bend Economy Database. https://lucyapps.shinyapps.io/sbeconomydb/",
                                      #br(),br(),
                                      #"Download newsletter ",tags$a(href = "my-report.pdf", "here"),
                                      #br(),br(),

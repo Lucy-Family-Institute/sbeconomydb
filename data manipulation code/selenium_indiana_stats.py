@@ -4,7 +4,6 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.action_chains import ActionChains
 import time
 import datetime
 import os
@@ -73,8 +72,3 @@ def stats_in_scrape(downloads):
     #Delete download
     os.remove(source)
 
-
-
-#%%
-stats_in_scrape("C:/Users/mhauenst/Downloads")
-# %%

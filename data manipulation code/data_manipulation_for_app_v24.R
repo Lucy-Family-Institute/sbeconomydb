@@ -277,37 +277,37 @@ rm(sb_businesses_upto_2018,sb_businesses_post_2019,sb_business_licenses)
 
 
 # occupational wage growth 
-read_rds("C:/Users/LOANER/OneDrive - nd.edu/Data/OES/oes data manipualtion/sb_oes.Rds") %>%
-  write_rds("app/data/sb_oes.Rds")
+#read_rds(""C:/Users/LOA data manipualtion/sb_oes.Rds") %>%
+#  write_rds("app/data/sb_oes.Rds")
 
 
 
 #### Industry Structure
-area_titles <- blscrapeR::area_titles %>% mutate(area_fips=as.character(area_fips))%>%
-  mutate(area_title=str_remove(area_title," MSA"))
-cleaned_industry_titles <- blscrapeR::naics %>% mutate(industry_title=str_remove(industry_title,"NAICS [0-9]+ ")) %>%
-  mutate(industry_title=str_remove(industry_title,"NAICS [0-9]+-[0-9]+ "))
+#area_titles <- blscrapeR::area_titles %>% mutate(area_fips=as.character(area_fips))%>%
+#  mutate(area_title=str_remove(area_title," MSA"))
+#cleaned_industry_titles <- blscrapeR::naics %>% mutate(industry_title=str_remove(industry_title,"NAICS [0-9]+ ")) %>%
+#  mutate(industry_title=str_remove(industry_title,"NAICS [0-9]+-[0-9]+ "))
 
-msa_qcew_2019_q4 <- read_csv("C:/Users/Swapnil PC/OneDrive - nd.edu/Data/QCEW/msa/msa_qcew_2019_q4.csv")
+#msa_qcew_2019_q4 <- read_csv("C:/Users/Swapnil PC/OneDrive - nd.edu/Data/QCEW/msa/msa_qcew_2019_q4.csv")
 
-sb_naics_sector <- msa_qcew_2019_q4 %>%
-  select(area_fips,own_code,industry_code,agglvl_code,size_code,year,qtr,month3_emplvl) %>%
-  filter(agglvl_code==44) %>% # MSA, Private, by NAICS Sector
-  group_by(area_fips,industry_code, year,qtr) %>% 
-  summarise(bls_employment=sum(month3_emplvl, na.rm = T)) %>% # aggregate over own_code
-  ungroup() %>%
-  filter(industry_code!=9999) %>% # remove undefined industry
-  left_join(area_titles, by="area_fips") %>%
-  left_join(cleaned_industry_titles, by="industry_code")  %>% # lets keep this to emphasise these are MSAs
-  select(msa_fips=area_fips,msa_name=area_title,industry_code,industry_title,bls_employment,year,qtr) %>%
-  filter(msa_name=="South Bend-Mishawaka, IN-MI") # the total employment numbers are very low. checj that
+#sb_naics_sector <- msa_qcew_2019_q4 %>%
+#  select(area_fips,own_code,industry_code,agglvl_code,size_code,year,qtr,month3_emplvl) %>%
+#  filter(agglvl_code==44) %>% # MSA, Private, by NAICS Sector
+#  group_by(area_fips,industry_code, year,qtr) %>% 
+#  summarise(bls_employment=sum(month3_emplvl, na.rm = T)) %>% # aggregate over own_code
+#  ungroup() %>%
+#  filter(industry_code!=9999) %>% # remove undefined industry
+#  left_join(area_titles, by="area_fips") %>%
+#  left_join(cleaned_industry_titles, by="industry_code")  %>% # lets keep this to emphasise these are MSAs
+#  select(msa_fips=area_fips,msa_name=area_title,industry_code,industry_title,bls_employment,year,qtr) %>%
+#  filter(msa_name=="South Bend-Mishawaka, IN-MI") # the total employment numbers are very low. checj that
 
-write_csv(sb_naics_sector,"C:/Users/Swapnil PC/OneDrive - nd.edu/Data/Job postings/Job Postings App/sb_naics_sector.csv")
+#write_csv(sb_naics_sector,"C:/Users/Swapnil PC/OneDrive - nd.edu/Data/Job postings/Job Postings App/sb_naics_sector.csv")
 
 ### Occupations
-sb_oes <- read_excel("C:/Users/Swapnil PC/OneDrive - nd.edu/Data/OES/oesm19ma/oesm19ma/MSA_M2019_dl.xlsx") %>%
-  filter(area_title=="South Bend-Mishawaka, IN-MI", o_group=="major") %>%
-  mutate(tot_emp=as.numeric(tot_emp))
+#sb_oes <- read_excel("C:/Users/Swapnil PC/OneDrive - nd.edu/Data/OES/oesm19ma/oesm19ma/MSA_M2019_dl.xlsx") %>%
+#  filter(area_title=="South Bend-Mishawaka, IN-MI", o_group=="major") %>%
+#  mutate(tot_emp=as.numeric(tot_emp))
 
-write_csv(sb_oes,"C:/Users/Swapnil PC/OneDrive - nd.edu/Data/Job postings/Job Postings App/sb_oes.csv")
+#write_csv(sb_oes,"C:/Users/Swapnil PC/OneDrive - nd.edu/Data/Job postings/Job Postings App/sb_oes.csv")
 

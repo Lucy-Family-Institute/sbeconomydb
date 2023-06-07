@@ -5,7 +5,8 @@ library(rvest)
 
 #setwd("C:/Users/smotghar/") # laptop
 downloads<-"C:/Users/mhauenst/Downloads"
-root <- here()
+#root <- here()
+root <- "C:/Users/mhauenst/Documents/sbeconomydb"
 
 jobs_func <- function(downloads,files) {
   curr_msa<- files[1, "msa"]
