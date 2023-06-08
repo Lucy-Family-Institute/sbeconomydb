@@ -22,3 +22,5 @@ subprocess.call(copy_paste_args, shell=True)
 #%% 3) Run the Monthly Manipulation Code
 subprocess.call(data_manipulation_args, shell=True)
 
+#%% 4) Push to GitHub
+subprocess.call(['sh', "git_commit.sh"])

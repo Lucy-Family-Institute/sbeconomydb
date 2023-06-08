@@ -25,4 +25,6 @@ stats_in_scrape(downloads=downloads_location)
 #%% 4) Run the Monthly Manipulation Code
 subprocess.call(data_manipulation_args, shell=True)
 
+# %% 5) Push to GitHub
+subprocess.call(['sh', "git_commit.sh"])
 # %%

@@ -21,6 +21,7 @@ Initial Set-up
 - Create a virtual environment using requirements.txt to run the Python scripts
 - Open "weekly_updates_control_file.py" 
     - Change rscript_location to the location of the R script executable on your system
+- Open "git_commit.sh" and change the full directory of the sbeconomydb project
 
 Weekly Schedulable Tasks
 - Run "weekly_updates_control_file.py" This performs the following tasks:
@@ -30,6 +31,7 @@ Weekly Schedulable Tasks
     2. Scrapes the 26 data files from indiannacareerconnect.com (refer to full documentation)
     3. Runs "automated_copy_paste_monthly.R" - takes the 26 data files and moves them from downloads to the relevant folders in raw data.
     4. Runs "data_manipulation_weekly_v24.R" - processes the raw data
+    5. Runs "git_commit.sh" to automatically push to GitHub
 
 - Optionally, run "sbeconomytracker.R" to check the app locally
 
@@ -52,6 +54,8 @@ Initial Set-up
 - Open "monthly_updates_control_file.py" 
     - Change rscript_location to the location of the R script executable on your system
     - Change donwloads_location to the location of your downloads folder
+- Open "git_commit.sh" and change the full directory of the sbeconomydb project
+
 
 Monthly Schedulable Tasks
 - Run "monthly_updates_control_file.py, which performs the following tasks:
@@ -62,5 +66,6 @@ Monthly Schedulable Tasks
     3. Runs "automated_copy_paste_monthly.R" - takes the 9 data files and moves them from downloads to the relevant folders in raw data.
     3. Scrapes the SNAP and TANF data from stats.indiana.edu (refer to full documentation)
     4. Runs "data_manipulation_monthly_v5.R" - processes the raw data
-
+    5. Runs "git_commit.sh" to automatically push to GitHub
+    
 - Optionally, run "sbeconomytracker.R" to check the app locally
