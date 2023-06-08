@@ -8,6 +8,7 @@ rscript_location = "C:/Program Files/R/R-4.2.1/bin/Rscript.exe"
 copy_paste_location ="./automated_copy_paste_monthly.R"
 data_manipulation_location = "./data_manipulation_monthly_v5.R"
 downloads_location = "C:/Users/mhauenst/Downloads"
+git_bash_location = "C:/Program Files/Git/git-bash.exe"
 copy_paste_args = [rscript_location, copy_paste_location]
 data_manipulation_args = [rscript_location, data_manipulation_location]
 
@@ -26,5 +27,5 @@ stats_in_scrape(downloads=downloads_location)
 subprocess.call(data_manipulation_args, shell=True)
 
 # %% 5) Push to GitHub
-subprocess.call(['sh', "git_commit.sh"])
+subprocess.call([git_bash_location, "git_commit.sh"])
 # %%
