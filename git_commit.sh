@@ -5,4 +5,4 @@ timestamp() {
   date +"at %H:%M:%S on %d/%m/%Y"
 }
 git commit -am "Auto-commit data updates $(timestamp)"
-git push origin master
+git push origin main
