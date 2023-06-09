@@ -1,5 +1,5 @@
 #!/bin/sh -e
-cd C:/Users/mhauenst/Documents/sbeconomydb/
+cd $1
 git add --all
 timestamp() {
   date +"on %m/%d/%Y at %H:%M:%S"
