@@ -21,20 +21,24 @@ Initial Set-up
 - Create a virtual environment using requirements.txt to run the Python scripts
 - Open "weekly_updates_control_file.py" 
     - Change rscript_location to the location of the R script executable on your system
-- Open "git_commit.sh" and change the full directory of the sbeconomydb project
+    - Change git_bash_location to the git bash executable on your system
+    - Change main_repo_location and shiny_app_location to the local repo for sbeconomydb and shiny-apps
 
 Weekly Schedulable Tasks
 - Run "weekly_updates_control_file.py" This performs the following tasks:
     1. Imports the following function
          - Python function get_weekly_msa_data() from "selenium_career_connect_monthly.py" for scraping weekly data from indianacareerconnect.com
-    
-    2. Scrapes the 26 data files from indiannacareerconnect.com (refer to full documentation)
-    3. Runs "automated_copy_paste_monthly.R" - takes the 26 data files and moves them from downloads to the relevant folders in raw data.
-    4. Runs "data_manipulation_weekly_v24.R" - processes the raw data
-    5. Runs "git_commit.sh" to automatically push to GitHub
+    2. Pulls sbeconomydb from GitHub
+    3. Scrapes the 26 data files from indiannacareerconnect.com (refer to full documentation)
+    4. Runs "automated_copy_paste_monthly.R" - takes the 26 data files and moves them from downloads to the relevant folders in raw data.
+    5. Runs "data_manipulation_weekly_v24.R" - processes the raw data
+    5. Pushes sbeconomydb to GitHub
+    6. Pulls shiny-apps from GitHub
+    7. Copies sbeconomydb/app/data to shiny-apps/sbeconomydb/data
+    8. Pushes shiny-apps to GitHub 
+
 
 - Optionally, run "sbeconomytracker.R" to check the app locally
-
 
 ## Monthly Updates
 Initial Set-up
@@ -54,7 +58,8 @@ Initial Set-up
 - Open "monthly_updates_control_file.py" 
     - Change rscript_location to the location of the R script executable on your system
     - Change donwloads_location to the location of your downloads folder
-- Open "git_commit.sh" and change the full directory of the sbeconomydb project
+    - Change git_bash_location to the git bash executable on your system
+    - Change main_repo_location and shiny_app_location to the local repo for sbeconomydb and shiny-apps
 
 
 Monthly Schedulable Tasks
