@@ -5,7 +5,7 @@ from selenium_indiana_stats import stats_in_scrape
 from selenium_career_connect_monthly import get_monthly_msa_data
 
 #%%
-rscript_location = "C:/Program Files/R/R-4.2.1/bin/Rscript.exe"
+rscript_location = "C:/Program Files/R/R-4.3.0/bin/Rscript.exe"
 copy_paste_location ="./automated_copy_paste_monthly.R"
 data_manipulation_location = "./data_manipulation_monthly_v5.R"
 downloads_location = "C:/Users/mhauenst/Downloads"

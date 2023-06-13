@@ -11,6 +11,7 @@ import shutil
 import glob
 #%%
 def stats_in_scrape(downloads):
+    """Scrapes SNAP and TANF data from stats.indiana.edu"""
     # Break if downloads has an old file
     if len(glob.glob(downloads + "/stats_data_*.xls")) != 0:
          return("Remove old Stats Indiana downloads before running 'selenium_indiana_stats.py")

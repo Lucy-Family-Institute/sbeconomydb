@@ -1,10 +1,11 @@
 #%% Control file for Weekly Updates
 import subprocess
 import shutil
+import time
 from selenium_career_connect import get_weekly_msa_data
 
 #%%
-rscript_location = "C:/Program Files/R/R-4.2.1/bin/Rscript.exe"
+rscript_location = "C:/Program Files/R/R-4.3.0/bin/Rscript.exe"
 git_bash_location = "C:/Program Files/Git/git-bash.exe"
 copy_paste_location ="./automated_copy_paste_v1.R"
 data_manipulation_location = "./data_manipulation_for_app_v24.R"
@@ -18,6 +19,8 @@ subprocess.call([git_bash_location, "git_pull.sh", main_repo_location])
 
 #%% 2) Scrape the Indiana Career Connect Webpage
 get_weekly_msa_data(msa='South Bend-Mishawaka, IN-MI Metropolitan Statistical Area')
+
+time.sleep(5*60)
 
 get_weekly_msa_data(msa='Elkhart-Goshen, IN Metropolitan Statistical Area')
 
