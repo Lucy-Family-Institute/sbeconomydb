@@ -8040,3 +8040,105 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
 1689213725088	Marionette	INFO	Stopped listening on port 53730
 Dynamically enable window occlusion 1
+1689254902698	geckodriver	INFO	Listening on 127.0.0.1:60280
+1689254905771	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60281" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\mhauenst\\AppData\\Local\\Temp\\rust_mozprofilePWhpWe"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1689254906021	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1689254906086	Marionette	INFO	Listening on port 60291
+WebDriver BiDi listening on ws://127.0.0.1:60281
+Read port: 60291
+1689254906227	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60281/devtools/browser/a8418fc6-6b85-4acd-b933-cb109954cdc9
+JavaScript warning: https://www.indianacareerconnect.com/vosnet/JavaScript/jQueryLibrary/jquery.tablesorter.min.js, line 1622: unreachable code after return statement
+JavaScript warning: https://www.indianacareerconnect.com/vosnet/JavaScript/jQueryLibrary/jquery.tablesorter.min.js, line 1622: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript warning: https://www.indianacareerconnect.com/vosnet/JavaScript/jQueryLibrary/jquery.tablesorter.min.js, line 1622: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript warning: https://www.indianacareerconnect.com/vosnet/JavaScript/jQueryLibrary/jquery.tablesorter.min.js, line 1622: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+1689255525335	Marionette	INFO	Stopped listening on port 60291
+Dynamically enable window occlusion 1
+1689255537694	geckodriver	INFO	Listening on 127.0.0.1:60550
+1689255540763	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60551" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\mhauenst\\AppData\\Local\\Temp\\rust_mozprofile9bk0BB"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1689255540998	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1689255541065	Marionette	INFO	Listening on port 60558
+WebDriver BiDi listening on ws://127.0.0.1:60551
+Read port: 60558
+1689255541223	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60551/devtools/browser/8c84939a-1a20-4e2d-bb21-7c9ae4e316a7
+JavaScript warning: https://www.indianacareerconnect.com/vosnet/JavaScript/jQueryLibrary/jquery.tablesorter.min.js, line 1622: unreachable code after return statement
+JavaScript warning: https://www.indianacareerconnect.com/vosnet/JavaScript/jQueryLibrary/jquery.tablesorter.min.js, line 1622: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript warning: https://www.indianacareerconnect.com/vosnet/JavaScript/jQueryLibrary/jquery.tablesorter.min.js, line 1622: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript warning: https://www.indianacareerconnect.com/vosnet/JavaScript/jQueryLibrary/jquery.tablesorter.min.js, line 1622: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.indianacareerconnect.com."
+JavaScript error: https://www.indianacareerconnect.com/vosnet/lmi/profiles/js/profile.js, line 478: uncaught exception: 
+1689255959021	Marionette	INFO	Stopped listening on port 60558
+Dynamically enable window occlusion 1
+1689256052783	geckodriver	INFO	Listening on 127.0.0.1:60777
+1689256055821	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60778" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\mhauenst\\AppData\\Local\\Temp\\rust_mozprofileK2Bemw"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1689256056076	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1689256056148	Marionette	INFO	Listening on port 60787
+WebDriver BiDi listening on ws://127.0.0.1:60778
+Read port: 60787
+1689256056326	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60778/devtools/browser/297b1b7c-1826-4376-bf63-42514af501a4
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 599))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://www.stats.indiana.edu."
+1689256119450	Marionette	INFO	Stopped listening on port 60787
+Dynamically enable window occlusion 1
